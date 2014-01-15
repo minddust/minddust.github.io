@@ -1,0 +1,45 @@
+<!DOCTYPE html><!-- 01101101 01101001 01101110 01100100 01100100 01110101 01110011 01110100 -->
+<html lang="en">
+    <head>
+        <title>{% if page.title %}{{ page.title }} &ndash; {% endif %}{{ site.domain }}</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="author" content="{{ site.author.name }}">{% if page.description %}
+        <meta name="description" content="{{ page.description }}">{% endif %}
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" href="/favicon.ico">
+        <link rel="stylesheet" type="text/css" href="/res/minddust.min.css">
+        <link rel="alternate" type="application/rss+xml" title="{{ site.name }}" href="/feed.xml">
+    </head>
+    <body>
+        <div id="site">
+            <div class="container">
+                <div id="header">
+                    <!--[if lt IE 8]>
+                        <div class="alert alert-danger">
+                            <p><b>You are using an outdated browser!</b></p>
+                            <p>This can lead to some serious problems and is generally unsave!</p>
+                            <p>Please use new version of <a href='http://www.mozilla.org/firefox'>Firefox</a>, <a href='http://www.google.com/chrome'>Chrome</a> or <a href='http://www.apple.com/safari'>Safari</a>.</p>
+                        </div>
+                    <![endif]-->
+                    <a href="/" class="label label-darkblue">{{ site.name }}</a>
+                    <a href="/blog/" class="label label-darkblue"><i class="fa fa-bars"></i></a>
+                    <a href="/projects/" class="label label-darkblue"><i class="fa fa-rocket"></i></a>
+                    <a href="/feed.xml" class="label label-darkblue"><i class="fa fa-rss"></i></a>
+                    <a href="{{ site.author.github_link }}" class="label label-darkblue"><i class="fa fa-github"></i></a>
+                    <a href="{{ site.author.twitter_link }}" class="label label-darkblue"><i class="fa fa-twitter"></i></a>
+                </div>
+                <div id="content">
+{{ content }}
+                </div>
+            </div>
+            <div id="push"></div>
+        </div>
+        <footer>
+            <div class="footer-table">
+                <div class="footer-cell">&copy; {{ site.domain }}, {{ site.copyright }} &ndash; <a href="/imprint/">imprint</a></div>
+            </div>
+        </footer>
+        <script src="/res/minddust.min.js"></script>
+    </body>
+</html>

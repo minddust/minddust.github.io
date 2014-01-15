@@ -1,0 +1,19 @@
+---
+layout: project
+tab: gallery
+---
+
+{% include assign_project.html %}
+
+{% if project.gallery %}
+    <div class="row">
+        {% for image in project.gallery %}
+            {% capture image_url %}/res/{{ project.slug }}/{{ image }}{% endcapture %}
+            <div class="col-sm-6 col-md-3">
+                <a href="{{ image_url }}" class="thumbnail" data-toggle="lightbox" data-gallery="{{ project.slug }}" data-parent="#post-content"><img src="{{ image_url }}"></a>
+            </div>
+        {% endfor %}
+    </div>
+{% else %}
+    <p>There is no gallery for this project.</p>
+{% endif %}

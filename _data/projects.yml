@@ -1,0 +1,50 @@
+- slug: bootstrap-progressbar
+  title: bootstrap-progressbar
+  subtitle: jQuery plugin for twitter bootstrap's progressbar (v2 & v3) for displaying text and animations
+  has_gallery: false
+  has_changelog: true
+
+- slug: jquery-pjaxr
+  title: jQuery-pjaxr
+  subtitle: Pushstate aJAX eXtended Replacements
+  has_gallery: false
+  has_changelog: true
+
+- slug: campusnews
+  title: Campusnews
+  subtitle: university information system for mobile devices including cafeteria, bus connections, courses, map, news feeds, mailing
+  has_gallery: true
+  has_changelog: false
+  gallery:
+  - campusnews_01_splashscreen.jpg
+  - campusnews_02_initial_swipe_menu.jpg
+  - campusnews_03_location_menu.jpg
+  - campusnews_04_location_swipe_menu.jpg
+  - campusnews_05_cafeteria_week_overview.jpg
+  - campusnews_06_cafeteria_day_overview.jpg
+  - campusnews_07_cafeteria_dish.jpg
+  - campusnews_08_cafeteria_dish_rating.jpg
+  - campusnews_09_cafeteria_dish_rated.jpg
+  - campusnews_10_bus_list.jpg
+  - campusnews_11_news.jpg
+  - campusnews_12_map.jpg
+  - campusnews_13_map_building.jpg
+  - campusnews_14_map_room.jpg
+  - campusnews_15_map_computerroom.jpg
+  - campusnews_16_map_info.jpg
+  - campusnews_17_mail_login.jpg
+  - campusnews_18_mail_list.jpg
+  - campusnews_19_mail_detail.jpg
+  - campusnews_20_mail_compose.jpg
+  - campusnews_21_search.jpg
+  - campusnews_22_search_result_list.jpg
+  - campusnews_23_search_result_detail.jpg
+  - campusnews_24_search_result_detail_mail.jpg
+  - campusnews_25_search_result_detail_mail_choose.jpg
+  - campusnews_26_search_result_detail_mail_campusnews.jpg
+  - campusnews_27_course_list_canceled.jpg
+  - campusnews_28_course_list.jpg
+  - campusnews_29_course_detail.jpg
+  - campusnews_30_settings.jpg
+  - campusnews_31_about.jpg
+  - campusnews_32_about_simpsons.jpg

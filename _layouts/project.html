@@ -1,0 +1,39 @@
+---
+layout: default
+---
+
+{% include assign_project.html %}
+
+{% if project %}
+    <header id="post-header">
+        <h1 id="post-title">{{ project.title }}</h1>
+        {% if project.subtitle %}<h4 id="post-subtitle">{{ project.subtitle }}</h4>{% endif %}
+    </header>
+
+    <div id="post-content">
+        <ul class="nav nav-pills">
+            {% if page.tab == 'overview' %}
+                <li class="active"><a href="#">Overview</a></li>
+            {% else %}
+                <li><a href="/project/{{ project.slug }}/">Overview</a></li>
+            {% endif %}
+            {% if project.has_gallery %}
+                {% if page.tab == 'gallery' %}
+                    <li class="active"><a href="#">Gallery</a></li>
+                {% else %}
+                    <li><a href="/project/{{ project.slug }}/gallery/">Gallery</a></li>
+                {% endif %}
+            {% endif %}
+            {% if project.has_changelog %}
+                {% if page.tab == 'changelog' %}
+                    <li class="active"><a href="#">Changelog</a></li>
+                {% else %}
+                    <li><a href="/project/{{ project.slug }}/changelog/">Changelog</a></li>
+                {% endif %}
+            {% endif %}
+        </ul>
+        {{ content }}
+    </div>
+{% else %}
+    <p>Project not found.</p>
+{% endif %}

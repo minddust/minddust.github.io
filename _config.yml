@@ -1,0 +1,26 @@
+timezone: Europe/Berlin
+pygments: true
+markdown: redcarpet
+permalink: /post/:title
+relative_permalinks: true
+
+redcarpet:
+  extensions: [autolink]
+
+exclude: [README.md, TODO.md, LICENSE, Gruntfile.js, package.json]
+
+paginate: 5
+paginate_path: '/blog/:num'
+
+excerpt_separator: "\n\n\n"
+
+# own settings
+name: minddust
+domain: minddust.com
+url: http://www.minddust.com
+description: Portfolio website of Stephan Groß
+copyright: 2013&mdash;2014
+author:
+    name: Stephan Groß
+    github_link: https://github.com/minddust
+    twitter_link: https://twitter.com/minddust
