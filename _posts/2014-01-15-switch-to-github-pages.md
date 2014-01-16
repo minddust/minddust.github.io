@@ -14,6 +14,5 @@ Main reasons in no particular order:
 * no server costs
 * no need for any dynamic content
 * highly available through github cdn
-* something new to learn
 
-I regret nothing and am really impressed about another awesome Github feature!
+I am really impressed of this awesome Github feature!
