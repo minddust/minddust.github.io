@@ -8,6 +8,7 @@ module.exports = function(grunt) {
                     '.temp/minddust.js': [
                         '_resources/vendors/jquery/2.0.3/jquery.js',
                         '_resources/vendors/bootstrap/3.0.3/js/modal.js',
+                        '_resources/vendors/bootstrap/3.0.3/js/tooltip.js',
 //                        '_resources/vendors/ekko-lightbox/3.0.3a/js/ekko-lightbox.js',
                         '_resources/javascript/ekko-lightbox-font-awesome.js',
                         '_resources/javascript/minddust.js',

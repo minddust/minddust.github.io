@@ -3,4 +3,7 @@ $(document).ready(function() {
         event.preventDefault();
         $(this).ekkoLightbox();
     });
+    $('[data-toggle="tooltip"]').tooltip({
+        'placement': 'top'
+    });
 });
