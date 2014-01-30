@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Switch to GitHub Pages
+title: Switch To GitHub Pages
 category: general
 tags: [github]
 ---
