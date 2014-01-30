@@ -1,5 +1,6 @@
 ---
 layout: post
+title: Switch to GitHub Pages
 category: general
 tags: [github]
 ---
@@ -13,6 +14,6 @@ Main reasons in no particular order:
 * no worries about crashing servers
 * no server costs
 * no need for any dynamic content
-* highly available through github cdn
+* highly available through GitHub cdn
 
-I am really impressed of this awesome Github feature!
+I am really impressed of this awesome GitHub feature!
