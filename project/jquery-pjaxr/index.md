@@ -219,6 +219,6 @@ I like to thank [Chris Wanstrath](https://github.com/defunkt) for his really awe
 
 ## Copyright and license
 
-Copyright 2013 Stephan Groß, under [MIT license](LICENSE).
+Copyright 2013 Stephan Groß, under [MIT license](https://github.com/minddust/jquery-pjaxr/blob/master/LICENSE).
 
 Want to appreciate my work? [minddust at Gittip](https://www.gittip.com/minddust/)
