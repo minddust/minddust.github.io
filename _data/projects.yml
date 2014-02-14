@@ -48,3 +48,9 @@
   - campusnews_30_settings.jpg
   - campusnews_31_about.jpg
   - campusnews_32_about_simpsons.jpg
+
+- slug: django-spaceless-except-pre
+  title: Django spaceless_except_pre
+  subtitle: Spaceless With Preserved Pre Formatting
+  has_gallery: false
+  has_changelog: false
