@@ -6,12 +6,12 @@ tab: gallery
 {% include assign_project.html %}
 
 {% if project.gallery %}
-    <div class="row">
+    <div id="gallery" class="row" data-toggle="gallery">
         {% for image in project.gallery %}
             {% capture image_url %}/res/{{ project.slug }}/{{ image }}{% endcapture %}
-            <div class="col-sm-6 col-md-3">
-                <a href="{{ image_url }}" class="thumbnail" data-toggle="lightbox" data-gallery="{{ project.slug }}" data-parent="#post-content"><img src="{{ image_url }}"></a>
-            </div>
+            <a href="{{ image_url }}" class="col-xs-6 col-sm-4 col-md-3" data-thumbnail>
+                <img src="{{ image_url }}" class="img-responsive img-thumbnail">
+            </a>
         {% endfor %}
     </div>
 {% else %}
