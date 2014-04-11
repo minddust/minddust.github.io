@@ -5,9 +5,9 @@ category: general
 tags: [github, open-source]
 ---
 
-A friend just ask me if he could see my [GitHub Pages](http://pages.github.com/) setup. 
+A friend ask me if he could see my [GitHub Pages](http://pages.github.com/) setup. 
 
-> Well sure - look at my repositories
+> Well sure just look at my repositories
 
 But than i noticed that it's private for no reason - so here we go!
 
