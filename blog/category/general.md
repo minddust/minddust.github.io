@@ -1,6 +1,6 @@
 ---
 layout: blog_by_category
-title: 'Articles by tag: general'
+title: 'Articles by category: general'
 category: general
 permalink: general/
 ---
