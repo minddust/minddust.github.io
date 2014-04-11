@@ -11,9 +11,9 @@ A friend just ask me if he could see my [GitHub Pages](http://pages.github.com/)
 
 But than i noticed that it's private for no reason - so here we go!
 
-[](https://github.com/minddust/minddust.github.io)
+https://github.com/minddust/minddust.github.io
 
-tl;dr
+**tl;dr**
 
 Maybe there are some things you like to know or wanna see:
 
