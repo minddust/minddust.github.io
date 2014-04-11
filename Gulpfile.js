@@ -20,6 +20,7 @@ var paths = {
         './_resources/vendors/bootstrap/3.1.1/js/tooltip.js',
         './_resources/vendors/bootstrap/3.1.1/js/transition.js',
         './_resources/scripts/gallery.js',
+        './_resources/scripts/tooltip.js',
         './_resources/scripts/google_analytics.js'
     ],
     styles: [
@@ -54,7 +55,7 @@ var bannerStyles = [
 gulp.task('scripts', function() {
     return gulp.src(paths.scripts)
         .pipe(concat('minddust.min.js'))
-//        .pipe(uglify())
+        .pipe(uglify())
         .pipe(header(bannerScripts, {pkg: pkg, currentYear: currentYear}))
         .pipe(gulp.dest(paths.build));
 });
