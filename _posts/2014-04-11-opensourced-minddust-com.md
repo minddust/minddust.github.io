@@ -19,4 +19,5 @@ https://github.com/minddust/minddust.github.io
 Maybe there are some things you like to know or wanna see:
 
 * All script or style changes are compiled and commited locally
-* [data](https://github.com/minddust/minddust.github.io/blob/master/_data) workaround to filter by [category](https://github.com/minddust/minddust.github.io/blob/master/_layouts/blog_by_category.html) and by [tag](https://github.com/minddust/minddust.github.io/blob/master/_layouts/blog_by_tag.html) cause GitHub’s jekyll setup doesn’t allow you to use plugins
+* [data](https://github.com/minddust/minddust.github.io/blob/master/_data) workaround to filter by [category](https://github.com/minddust/minddust.github.io/blob/master/_layouts/blog_by_category.html) and by [tag](https://github.com/minddust/minddust.github.io/blob/master/_layouts/blog_by_tag.html) (*cause GitHub’s jekyll setup doesn’t allow you to use plugins*)
+  * [post](https://github.com/minddust/minddust.github.io/blob/master/_layouts/post.html) usage of data information
