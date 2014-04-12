@@ -5,7 +5,6 @@ var clean = require('gulp-clean');
 var concat = require('gulp-concat');
 var header = require('gulp-header');
 var less = require('gulp-less');
-var recess = require('gulp-recess');
 var rename = require('gulp-rename');
 var uglify = require('gulp-uglify');
 var minifyCss = require('gulp-minify-css');
@@ -63,7 +62,6 @@ gulp.task('scripts', function() {
 gulp.task('styles', function() {
     return gulp.src(paths.styles)
         .pipe(less())
-        .pipe(recess())
         .pipe(minifyCss({keepSpecialComments: 0}))
         .pipe(header(bannerStyles, {pkg: pkg, currentYear: currentYear}))
         .pipe(rename({suffix: '.min'}))
