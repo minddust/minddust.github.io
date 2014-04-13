@@ -59,7 +59,7 @@
 
     Gallery.prototype.registerKeys = function () {
         var self = this;
-        $(document).on('keyup', function (e) {
+        $(document).off('keyup').on('keyup', function (e) {
             if (e.keyCode === 37) {
                 self.index--;
                 self.displayImage();
@@ -71,6 +71,9 @@
             if (e.keyCode === 27) {
                 self.$modal.modal('hide');
             }
+        });
+        this.$modal.off('click').on('click', function() {
+            self.$modal.modal('hide');
         });
     };
 
