@@ -72,9 +72,6 @@
                 self.$modal.modal('hide');
             }
         });
-        this.$modal.off('click').on('click', function() {
-            self.$modal.modal('hide');
-        });
     };
 
     Gallery.prototype.registerResize = function () {
