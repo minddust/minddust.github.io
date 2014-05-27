@@ -4,6 +4,15 @@
 - slug: django-template-tags
   name: Django Template Tags
 
+- slug: font-awesome
+  name: Font Awesome
+
+- slug: icons
+  name: Icons
+
+- slug: image-processing
+  name: Image Processing
+
 - slug: python
   name: Python
 
