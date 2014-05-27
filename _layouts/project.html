@@ -31,6 +31,9 @@ layout: default
                     <li><a href="/project/{{ project.slug }}/changelog/">Changelog</a></li>
                 {% endif %}
             {% endif %}
+            {% if project.has_github %}
+                <li><a href="{{ project.github }}">GitHub</a></li>
+            {% endif %}
         </ul>
         {{ content }}
     </div>
