@@ -1,0 +1,208 @@
+<script type="text/javascript">
+    loadCSS("{{ page.url }}../css/bootstrap-progressbar-demo.css")
+</script>
+
+<div class="callout callout-info">all examples have to be triggered manually by clicking the <button type="button" class="btn btn-primary">start</button> or <button type="button" class="btn btn-danger">reset</button> button.</div>
+
+{% if include.bootstrap == "2" %}
+    {% capture bs_pro_def %}progress{% endcapture %}
+    {% capture bs_bar_def %}bar{% endcapture %}
+    {% capture bs_pro_suc %}progress progress-success{% endcapture %}
+    {% capture bs_bar_suc %}bar{% endcapture %}
+    {% capture bs_pro_inf %}progress progress-info{% endcapture %}
+    {% capture bs_bar_inf %}bar{% endcapture %}
+    {% capture bs_pro_wrn %}progress progress-warning{% endcapture %}
+    {% capture bs_bar_wrn %}bar{% endcapture %}
+    {% capture bs_pro_dng %}progress progress-danger{% endcapture %}
+    {% capture bs_bar_dng %}bar{% endcapture %}
+    {% capture bs_pro_def_strp %}progress progress-striped{% endcapture %}
+    {% capture bs_bar_def_strp %}bar{% endcapture %}
+    {% capture bs_pro_suc_strp %}progress progress-success progress-striped{% endcapture %}
+    {% capture bs_bar_suc_strp %}bar{% endcapture %}
+    {% capture bs_pro_inf_strp %}progress progress-info progress-striped{% endcapture %}
+    {% capture bs_bar_inf_strp %}bar{% endcapture %}
+    {% capture bs_pro_wrn_strp %}progress progress-warning progress-striped{% endcapture %}
+    {% capture bs_bar_wrn_strp %}bar{% endcapture %}
+    {% capture bs_pro_dng_strp %}progress progress-danger progress-striped{% endcapture %}
+    {% capture bs_bar_dng_strp %}bar{% endcapture %}
+    {% capture bs_pro_def_actv %}progress progress-striped active{% endcapture %}
+    {% capture bs_bar_def_actv %}bar{% endcapture %}
+    {% capture bs_pro_suc_actv %}progress progress-success progress-striped active{% endcapture %}
+    {% capture bs_bar_suc_actv %}bar{% endcapture %}
+    {% capture bs_pro_inf_actv %}progress progress-info progress-striped active{% endcapture %}
+    {% capture bs_bar_inf_actv %}bar{% endcapture %}
+    {% capture bs_pro_wrn_actv %}progress progress-warning progress-striped active{% endcapture %}
+    {% capture bs_bar_wrn_actv %}bar{% endcapture %}
+    {% capture bs_pro_dng_actv %}progress progress-danger progress-striped active{% endcapture %}
+    {% capture bs_bar_dng_actv %}bar{% endcapture %}
+{% elsif include.bootstrap == "3" %}
+    {% capture bs_pro_def %}progress{% endcapture %}
+    {% capture bs_bar_def %}progress-bar{% endcapture %}
+    {% capture bs_pro_suc %}progress{% endcapture %}
+    {% capture bs_bar_suc %}progress-bar progress-bar-success{% endcapture %}
+    {% capture bs_pro_inf %}progress{% endcapture %}
+    {% capture bs_bar_inf %}progress-bar progress-bar-info{% endcapture %}
+    {% capture bs_pro_wrn %}progress{% endcapture %}
+    {% capture bs_bar_wrn %}progress-bar progress-bar-warning{% endcapture %}
+    {% capture bs_pro_dng %}progress{% endcapture %}
+    {% capture bs_bar_dng %}progress-bar progress-bar-danger{% endcapture %}
+    {% capture bs_pro_def_strp %}progress progress-striped{% endcapture %}
+    {% capture bs_bar_def_strp %}progress-bar{% endcapture %}
+    {% capture bs_pro_suc_strp %}progress progress-striped{% endcapture %}
+    {% capture bs_bar_suc_strp %}progress-bar progress-bar-success{% endcapture %}
+    {% capture bs_pro_inf_strp %}progress progress-striped{% endcapture %}
+    {% capture bs_bar_inf_strp %}progress-bar progress-bar-info{% endcapture %}
+    {% capture bs_pro_wrn_strp %}progress progress-striped{% endcapture %}
+    {% capture bs_bar_wrn_strp %}progress-bar progress-bar-warning{% endcapture %}
+    {% capture bs_pro_dng_strp %}progress progress-striped{% endcapture %}
+    {% capture bs_bar_dng_strp %}progress-bar progress-bar-danger{% endcapture %}
+    {% capture bs_pro_def_actv %}progress progress-striped active{% endcapture %}
+    {% capture bs_bar_def_actv %}progress-bar progress-bar-striped{% endcapture %}
+    {% capture bs_pro_suc_actv %}progress progress-striped active{% endcapture %}
+    {% capture bs_bar_suc_actv %}progress-bar progress-bar-success{% endcapture %}
+    {% capture bs_pro_inf_actv %}progress progress-striped active{% endcapture %}
+    {% capture bs_bar_inf_actv %}progress-bar progress-bar-info{% endcapture %}
+    {% capture bs_pro_wrn_actv %}progress progress-striped active{% endcapture %}
+    {% capture bs_bar_wrn_actv %}progress-bar progress-bar-warning{% endcapture %}
+    {% capture bs_pro_dng_actv %}progress progress-striped active{% endcapture %}
+    {% capture bs_bar_dng_actv %}progress-bar progress-bar-danger{% endcapture %}
+{% elsif include.bootstrap == "3_2" %}
+    {% capture bs_pro_def %}progress{% endcapture %}
+    {% capture bs_bar_def %}progress-bar{% endcapture %}
+    {% capture bs_pro_suc %}progress{% endcapture %}
+    {% capture bs_bar_suc %}progress-bar progress-bar-success{% endcapture %}
+    {% capture bs_pro_inf %}progress{% endcapture %}
+    {% capture bs_bar_inf %}progress-bar progress-bar-info{% endcapture %}
+    {% capture bs_pro_wrn %}progress{% endcapture %}
+    {% capture bs_bar_wrn %}progress-bar progress-bar-warning{% endcapture %}
+    {% capture bs_pro_dng %}progress{% endcapture %}
+    {% capture bs_bar_dng %}progress-bar progress-bar-danger{% endcapture %}
+    {% capture bs_pro_def_strp %}progress{% endcapture %}
+    {% capture bs_bar_def_strp %}progress-bar progress-bar-striped{% endcapture %}
+    {% capture bs_pro_suc_strp %}progress{% endcapture %}
+    {% capture bs_bar_suc_strp %}progress-bar progress-bar-success progress-bar-striped{% endcapture %}
+    {% capture bs_pro_inf_strp %}progress{% endcapture %}
+    {% capture bs_bar_inf_strp %}progress-bar progress-bar-info progress-bar-striped{% endcapture %}
+    {% capture bs_pro_wrn_strp %}progress{% endcapture %}
+    {% capture bs_bar_wrn_strp %}progress-bar progress-bar-warning progress-bar-striped{% endcapture %}
+    {% capture bs_pro_dng_strp %}progress{% endcapture %}
+    {% capture bs_bar_dng_strp %}progress-bar progress-bar-danger progress-bar-striped{% endcapture %}
+    {% capture bs_pro_def_actv %}progress{% endcapture %}
+    {% capture bs_bar_def_actv %}progress-bar progress-bar-striped active{% endcapture %}
+    {% capture bs_pro_suc_actv %}progress{% endcapture %}
+    {% capture bs_bar_suc_actv %}progress-bar progress-bar-success progress-bar-striped active{% endcapture %}
+    {% capture bs_pro_inf_actv %}progress{% endcapture %}
+    {% capture bs_bar_inf_actv %}progress-bar progress-bar-info progress-bar-striped active{% endcapture %}
+    {% capture bs_pro_wrn_actv %}progress{% endcapture %}
+    {% capture bs_bar_wrn_actv %}progress-bar progress-bar-warning progress-bar-striped active{% endcapture %}
+    {% capture bs_pro_dng_actv %}progress{% endcapture %}
+    {% capture bs_bar_dng_actv %}progress-bar progress-bar-danger progress-bar-striped active{% endcapture %}
+{% endif %}
+
+**Horizontal**
+
+* [default settings](#h-default)
+* [default settings (right)](#h-right)
+* [filled text](#h-fill)
+* [filled text (nonpercentage)](#h-fill-nonpercentage)
+* [centered text](#h-center)
+* [centered text (nonpercentage)](#h-center-nonpercentage)
+
+**Vertical**
+
+* [default settings](#v-default)
+* [default settings (bottom)](#v-bottom)
+* [filled text](#v-fill)
+* [filled text (nonpercentage)](#v-fill-nonpercentage)
+* [centered text](#v-center)
+* [centered text (nonpercentage)](#v-center-nonpercentage)
+
+**Misc**
+
+* [transition delay](#m-delay)
+* [refresh speed](#m-refresh-speed)
+* [custom percent format](#m-custom-percentage-format)
+* [custom amount format](#m-custom-amount-format)
+* [custom amount format with min value](#m-custom-amount-format-with-min-value)
+* [callbacks](#m-callback)
+* [error](#m-error)
+* [multi trigger](#m-multi-trigger)
+
+### Horizontal
+
+<a name="h-default"></a>
+#### default settings
+{% include bootstrap_progressbar_demo_content.html id_prefix="h-default" %}
+
+<a name="h-right"></a>
+#### default settings (right)
+{% include bootstrap_progressbar_demo_content.html id_prefix="h-right" progress_style_extension=" right" %}
+
+<a name="h-fill"></a>
+#### filled text
+{% include bootstrap_progressbar_demo_content.html id_prefix="h-fill" script_extension="{display_text: 'fill'}" %}
+
+<a name="h-fill-nonpercentage"></a>
+#### filled text (nonpercentage)
+{% include bootstrap_progressbar_demo_content.html id_prefix="h-fill-nonpercentage" script_extension="{display_text: 'fill', use_percentage: false}" %}
+
+<a name="h-center"></a>
+#### centered text
+{% include bootstrap_progressbar_demo_content.html id_prefix="h-center" script_extension="{display_text: 'center'}" %}
+
+<a name="h-center-nonpercentage"></a>
+#### centered text (nonpercentage)
+{% include bootstrap_progressbar_demo_content.html id_prefix="h-center-nonpercentage" script_extension="{display_text: 'center', use_percentage: false}" %}
+
+
+### Vertical
+
+<a name="v-default"></a>
+#### default settings
+{% include bootstrap_progressbar_demo_content.html id_prefix="v-default" example_style_extension="fixed-height-250" progress_style_extension=" vertical" %}
+
+<a name="v-bottom"></a>
+#### default settings (bottom)
+{% include bootstrap_progressbar_demo_content.html id_prefix="v-bottom" example_style_extension="fixed-height-250" progress_style_extension=" vertical bottom" %}
+
+<a name="v-fill"></a>
+#### filled text
+{% include bootstrap_progressbar_demo_content.html id_prefix="v-fill" example_style_extension="fixed-height-250" progress_style_extension=" vertical" script_extension="{display_text: 'fill'}" %}
+
+<a name="v-fill-nonpercentage"></a>
+#### filled text (nonpercentage)
+{% include bootstrap_progressbar_demo_content.html id_prefix="v-fill-nonpercentage" example_style_extension="fixed-height-250" progress_style_extension=" vertical" script_extension="{display_text: 'fill', use_percentage: false}" %}
+
+<a name="v-center"></a>
+#### centered text
+{% include bootstrap_progressbar_demo_content.html id_prefix="v-center" example_style_extension="fixed-height-250" progress_style_extension=" vertical" script_extension="{display_text: 'center'}" %}
+
+<a name="v-center-nonpercentage"></a>
+#### centered text (nonpercentage)
+{% include bootstrap_progressbar_demo_content.html id_prefix="v-center-nonpercentage" example_style_extension="fixed-height-250" progress_style_extension=" vertical" script_extension="{display_text: 'center', use_percentage: false}" %}
+
+### Misc
+
+<a name="m-delay"></a>
+#### transition delay
+{% include bootstrap_progressbar_demo_content.html id_prefix="m-delay" script_extension="{transition_delay: 3000}" %}
+
+<a name="m-refresh-speed"></a>
+#### refresh speed
+{% include bootstrap_progressbar_demo_content.html id_prefix="m-refresh-speed" script_extension="{display_text: 'center', use_percentage: false, refresh_speed: 500}" %}
+
+<a name="m-custom-percentage-format"></a>
+#### custom percent format
+{% include bootstrap_progressbar_demo_content.html id_prefix="m-custom-percentage-format" script_extension="{display_text: 'center', percent_format: function(p) {return p + ' percent';}}" %}
+
+<a name="m-custom-amount-format"></a>
+#### custom amount format
+{% include bootstrap_progressbar_demo_content.html id_prefix="m-custom-amount-format" script_extension="{display_text: 'center', use_percentage: false, amount_format: function(p, t) {return p + ' of ' + t;}}" %}
+
+<a name="m-custom-amount-format-with-min-value"></a>
+#### custom amount format with min value
+{% include bootstrap_progressbar_demo_content.html id_prefix="m-custom-amount-format-with-min-value" script_extension="{display_text: 'center', use_percentage: false, amount_format: function(p, max, min) {return 'min: ' + min + ' current: ' + p + ' max: ' + max;}}" %}
+
+{% include bootstrap_progressbar_demo_content_2.html %}
+
+<script src="{{ page.url }}../js/bootstrap-progressbar.js"></script>

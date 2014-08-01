@@ -1,8 +1,9 @@
 {
   "name": "minddust",
-  "version": "0.4.1",
+  "version": "0.5.0",
   "author": "Stephan Groß",
   "homepage": "http://www.minddust.com",
+  "private": true,
   "repository": {
     "type": "git",
     "url": "git://github.com/minddust/minddust.github.io.git"

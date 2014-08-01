@@ -3,6 +3,7 @@
   subtitle: Font-Awesome to PNG online converter
   has_gallery: false
   has_changelog: false
+  has_demo: false
   has_github: false
 
 - slug: bootstrap-progressbar
@@ -10,6 +11,7 @@
   subtitle: jQuery plugin for twitter bootstrap's progressbar (v2 & v3) for displaying text and animations
   has_gallery: false
   has_changelog: true
+  has_demo: true
   has_github: true
   github: https://github.com/minddust/bootstrap-progressbar
 
@@ -18,6 +20,7 @@
   subtitle: Pushstate aJAX eXtended Replacements
   has_gallery: false
   has_changelog: true
+  has_demo: false
   has_github: https://github.com/minddust/jquery-pjaxr
 
 - slug: campusnews
@@ -25,6 +28,7 @@
   subtitle: university information system for mobile devices including cafeteria, bus connections, courses, map, news feeds, mailing
   has_gallery: true
   has_changelog: false
+  has_demo: false
   has_github: false
   gallery:
   - campusnews_01_splashscreen.jpg
@@ -65,4 +69,5 @@
   subtitle: Spaceless With Preserved Pre Formatting
   has_gallery: false
   has_changelog: false
+  has_demo: false
   has_github: false

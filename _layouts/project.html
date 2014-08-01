@@ -24,6 +24,18 @@ layout: default
                     <li><a href="/project/{{ project.slug }}/gallery/">Gallery</a></li>
                 {% endif %}
             {% endif %}
+            {% if project.has_demo %}
+                {% if page.tab == 'demo' %}
+                    {% capture project_demo_url %}/project/{{ project.slug }}/demo/{% endcapture %}
+                    {% if page.url != project_demo_url %}
+                        <li class="active"><a href="{{ project_demo_url }}">Demo</a></li>
+                    {% else %}
+                        <li class="active"><a href="#">Demo</a></li>
+                    {% endif %}
+                {% else %}
+                    <li><a href="/project/{{ project.slug }}/demo/">Demo</a></li>
+                {% endif %}
+            {% endif %}
             {% if project.has_changelog %}
                 {% if page.tab == 'changelog' %}
                     <li class="active"><a href="#">Changelog</a></li>

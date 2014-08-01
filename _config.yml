@@ -1,5 +1,5 @@
 timezone: Europe/Berlin
-pygments: true
+highlighter: pygments
 markdown: redcarpet
 permalink: /post/:title
 relative_permalinks: true

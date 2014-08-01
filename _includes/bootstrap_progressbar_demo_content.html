@@ -1,0 +1,291 @@
+{% capture id_prefix %}{{ include.id_prefix }}{% endcapture %}
+{% capture example_style_extension %}{{ include.example_style_extension }}{% endcapture %}
+{% capture progress_style_extension %}{{ include.progress_style_extension }}{% endcapture %}
+{% capture script_extension %}{{ include.script_extension }}{% endcapture %}
+
+<ul class="nav nav-tabs" role="tablist">
+    <li class="active"><a href="#{{ id_prefix }}-basic" role="tab" data-toggle="tab">basic</a></li>
+    <li><a href="#{{ id_prefix }}-themed" role="tab" data-toggle="tab">themed</a></li>
+    <li><a href="#{{ id_prefix }}-striped" role="tab" data-toggle="tab">striped</a></li>
+    <li><a href="#{{ id_prefix }}-animated" role="tab" data-toggle="tab">animated</a></li>
+    <li><a href="#{{ id_prefix }}-aria" role="tab" data-toggle="tab">aria</a></li>
+    <li><a href="#{{ id_prefix }}-animation" role="tab" data-toggle="tab">animation</a></li>
+</ul>
+<div class="tab-content">
+    <div class="tab-pane fade in active" id="{{ id_prefix }}-basic">
+        <h5>basic progressbars <button type="button" class="btn btn-primary" id="{{ id_prefix }}-basic-start">start</button> <button type="button" class="btn btn-danger" id="{{ id_prefix }}-basic-reset">reset</button></h5>
+        <div class="bs-example">
+            <div class="{{ example_style_extension }}">
+                <div class="{{ bs_pro_def }}{{ progress_style_extension }}"><div class="{{ bs_bar_def }}" role="progressbar" data-transitiongoal-backup="75"></div></div>
+            </div>
+            <script type='text/javascript'>
+                $(document).ready(function() {
+                    $('#{{ id_prefix }}-basic-start').click(function() {
+                        var $pb = $('#{{ id_prefix }}-basic .{{ bs_bar_def }}');
+                        $pb.attr('data-transitiongoal', $pb.attr('data-transitiongoal-backup'))
+                        $pb.progressbar({{ script_extension }});
+                    });
+                    $('#{{ id_prefix }}-basic-reset').click(function() {
+                        $('#{{ id_prefix }}-basic .{{ bs_bar_def }}').attr('data-transitiongoal', 0).progressbar({{ script_extension }});
+                    });
+                });
+            </script>
+        </div>
+{% highlight html %}
+<div class="{{ bs_pro_def }}{{ progress_style_extension }}">
+    <div class="{{ bs_bar_def }}" role="progressbar" data-transitiongoal="75"></div>
+</div>
+
+$(document).ready(function() {
+    $('.{{ bs_pro_def }} .{{ bs_bar_def }}').progressbar({{ script_extension }});
+});
+{% endhighlight %}
+    </div>
+    <div class="tab-pane fade" id="{{ id_prefix }}-themed">
+        <h5>themed progressbars <button type="button" class="btn btn-primary" id="{{ id_prefix }}-themed-start">start</button> <button type="button" class="btn btn-danger" id="{{ id_prefix }}-themed-reset">reset</button></h5>
+        <div class="bs-example">
+            <div class="{{ example_style_extension }}">
+                <div class="{{ bs_pro_suc }}{{ progress_style_extension }}"><div class="{{ bs_bar_suc }}" role="progressbar" data-transitiongoal-backup="40"></div></div>
+                <div class="{{ bs_pro_inf }}{{ progress_style_extension }}"><div class="{{ bs_bar_inf }}" role="progressbar" data-transitiongoal-backup="60"></div></div>
+                <div class="{{ bs_pro_wrn }}{{ progress_style_extension }}"><div class="{{ bs_bar_wrn }}" role="progressbar" data-transitiongoal-backup="80"></div></div>
+                <div class="{{ bs_pro_dng }}{{ progress_style_extension }}"><div class="{{ bs_bar_dng }}" role="progressbar" data-transitiongoal-backup="100"></div></div>
+            </div>
+            <script type='text/javascript'>
+                $(document).ready(function() {
+                    $('#{{ id_prefix }}-themed-start').click(function() {
+                        $('#{{ id_prefix }}-themed .{{ bs_bar_def }}').each(function () {
+                            var $pb = $(this);
+                            $pb.attr('data-transitiongoal', $pb.attr('data-transitiongoal-backup'));
+                            $pb.progressbar({{ script_extension }});
+                        });
+                    });
+                    $('#{{ id_prefix }}-themed-reset').click(function() {
+                        $('#{{ id_prefix }}-themed .{{ bs_bar_def }}').attr('data-transitiongoal', 0).progressbar({{ script_extension }});
+                    });
+                });
+            </script>
+        </div>
+{% highlight html %}
+<div class="{{ bs_pro_suc }}{{ progress_style_extension }}">
+    <div class="{{ bs_bar_suc }}" role="progressbar" data-transitiongoal="40"></div>
+</div>
+<div class="{{ bs_pro_inf }}{{ progress_style_extension }}">
+    <div class="{{ bs_bar_inf }}" role="progressbar" data-transitiongoal="60"></div>
+</div>
+<div class="{{ bs_pro_wrn }}{{ progress_style_extension }}">
+    <div class="{{ bs_bar_wrn }}" role="progressbar" data-transitiongoal="80"></div>
+</div>
+<div class="{{ bs_pro_dng }}{{ progress_style_extension }}">
+    <div class="{{ bs_bar_dng }}" role="progressbar" data-transitiongoal="100"></div>
+</div>
+
+$(document).ready(function() {
+    $('.{{ bs_pro_def }} .{{ bs_bar_def }}').progressbar({{ script_extension }});
+});
+{% endhighlight %}
+    </div>
+    <div class="tab-pane fade" id="{{ id_prefix }}-striped">
+        <h5>striped progressbars <button type="button" class="btn btn-primary" id="{{ id_prefix }}-striped-start">start</button> <button type="button" class="btn btn-danger" id="{{ id_prefix }}-striped-reset">reset</button></h5>
+        <div class="bs-example">
+            <div class="{{ example_style_extension }}">
+                <div class="{{ bs_pro_def_strp }}{{ progress_style_extension }}"><div class="{{ bs_bar_def_strp }}" role="progressbar" data-transitiongoal-backup="20"></div></div>
+                <div class="{{ bs_pro_suc_strp }}{{ progress_style_extension }}"><div class="{{ bs_bar_suc_strp }}" role="progressbar" data-transitiongoal-backup="40"></div></div>
+                <div class="{{ bs_pro_inf_strp }}{{ progress_style_extension }}"><div class="{{ bs_bar_inf_strp }}" role="progressbar" data-transitiongoal-backup="60"></div></div>
+                <div class="{{ bs_pro_wrn_strp }}{{ progress_style_extension }}"><div class="{{ bs_bar_wrn_strp }}" role="progressbar" data-transitiongoal-backup="80"></div></div>
+                <div class="{{ bs_pro_dng_strp }}{{ progress_style_extension }}"><div class="{{ bs_bar_dng_strp }}" role="progressbar" data-transitiongoal-backup="100"></div></div>
+            </div>
+            <script type='text/javascript'>
+                $(document).ready(function() {
+                    $('#{{ id_prefix }}-striped-start').click(function() {
+                        $('#{{ id_prefix }}-striped .{{ bs_bar_def }}').each(function () {
+                            var $pb = $(this);
+                            $pb.attr('data-transitiongoal', $pb.attr('data-transitiongoal-backup'));
+                            $pb.progressbar({{ script_extension }});
+                        });
+                    });
+                    $('#{{ id_prefix }}-striped-reset').click(function() {
+                        $('#{{ id_prefix }}-striped .{{ bs_bar_def }}').attr('data-transitiongoal', 0).progressbar({{ script_extension }});
+                    });
+                });
+            </script>
+        </div>
+{% highlight html %}
+<div class="{{ bs_pro_def_strp }}{{ progress_style_extension }}">
+    <div class="{{ bs_bar_def_strp }}" role="progressbar" data-transitiongoal="20"></div>
+</div>
+<div class="{{ bs_pro_suc_strp }}{{ progress_style_extension }}">
+    <div class="{{ bs_bar_suc_strp }}" role="progressbar" data-transitiongoal="40"></div>
+</div>
+<div class="{{ bs_pro_inf_strp }}{{ progress_style_extension }}">
+    <div class="{{ bs_bar_inf_strp }}" role="progressbar" data-transitiongoal="60"></div>
+</div>
+<div class="{{ bs_pro_wrn_strp }}{{ progress_style_extension }}">
+    <div class="{{ bs_bar_wrn_strp }}" role="progressbar" data-transitiongoal="80"></div>
+</div>
+<div class="{{ bs_pro_dng_strp }}{{ progress_style_extension }}">
+    <div class="{{ bs_bar_dng_strp }}" role="progressbar" data-transitiongoal="100"></div>
+</div>
+
+$(document).ready(function() {
+    $('.{{ bs_pro_def }} .{{ bs_bar_def }}').progressbar({{ script_extension }});
+});
+{% endhighlight %}
+    </div>
+    <div class="tab-pane fade" id="{{ id_prefix }}-animated">
+        <h5>animated progressbars <button type="button" class="btn btn-primary" id="{{ id_prefix }}-animated-start">start</button> <button type="button" class="btn btn-danger" id="{{ id_prefix }}-animated-reset">reset</button></h5>
+        <div class="bs-example">
+            <div class="{{ example_style_extension }}">
+                <div class="{{ bs_pro_def_actv }}{{ progress_style_extension }}"><div class="{{ bs_bar_def_actv }}" role="progressbar" data-transitiongoal-backup="20"></div></div>
+                <div class="{{ bs_pro_suc_actv }}{{ progress_style_extension }}"><div class="{{ bs_bar_suc_actv }}" role="progressbar" data-transitiongoal-backup="40"></div></div>
+                <div class="{{ bs_pro_inf_actv }}{{ progress_style_extension }}"><div class="{{ bs_bar_inf_actv }}" role="progressbar" data-transitiongoal-backup="60"></div></div>
+                <div class="{{ bs_pro_wrn_actv }}{{ progress_style_extension }}"><div class="{{ bs_bar_wrn_actv }}" role="progressbar" data-transitiongoal-backup="80"></div></div>
+                <div class="{{ bs_pro_dng_actv }}{{ progress_style_extension }}"><div class="{{ bs_bar_dng_actv }}" role="progressbar" data-transitiongoal-backup="100"></div></div>
+            </div>
+            <script type='text/javascript'>
+                $(document).ready(function() {
+                    $('#{{ id_prefix }}-animated-start').click(function() {
+                        $('#{{ id_prefix }}-animated .{{ bs_bar_def }}').each(function () {
+                            var $pb = $(this);
+                            $pb.attr('data-transitiongoal', $pb.attr('data-transitiongoal-backup'));
+                            $pb.progressbar({{ script_extension }});
+                        });
+                    });
+                    $('#{{ id_prefix }}-animated-reset').click(function() {
+                        $('#{{ id_prefix }}-animated .{{ bs_bar_def }}').attr('data-transitiongoal', 0).progressbar({{ script_extension }});
+                    });
+                });
+            </script>
+        </div>
+{% highlight html %}
+<div class="{{ bs_pro_def_actv }}{{ progress_style_extension }}">
+    <div class="{{ bs_bar_def_actv }}" role="progressbar" data-transitiongoal="20"></div>
+</div>
+<div class="{{ bs_pro_suc_actv }}{{ progress_style_extension }}">
+    <div class="{{ bs_bar_suc_actv }}" role="progressbar" data-transitiongoal="40"></div>
+</div>
+<div class="{{ bs_pro_inf_actv }}{{ progress_style_extension }}">
+    <div class="{{ bs_bar_inf_actv }}" role="progressbar" data-transitiongoal="60"></div>
+</div>
+<div class="{{ bs_pro_wrn_actv }}{{ progress_style_extension }}">
+    <div class="{{ bs_bar_wrn_actv }}" role="progressbar" data-transitiongoal="80"></div>
+</div>
+<div class="{{ bs_pro_dng_actv }}{{ progress_style_extension }}">
+    <div class="{{ bs_bar_dng_actv }}" role="progressbar" data-transitiongoal="100"></div>
+</div>
+
+$(document).ready(function() {
+    $('.{{ bs_pro_def }} .{{ bs_bar_def }}').progressbar({{ script_extension }});
+});
+{% endhighlight %}
+    </div>
+    <div class="tab-pane fade" id="{{ id_prefix }}-aria">
+        <h5>custom aria range progressbars <button type="button" class="btn btn-primary" id="{{ id_prefix }}-aria-start">start</button> <button type="button" class="btn btn-danger" id="{{ id_prefix }}-aria-reset">reset</button></h5>
+        <div class="bs-example">
+            <div class="{{ example_style_extension }}">
+                <div class="{{ bs_pro_def_strp }}{{ progress_style_extension }}"><div class="{{ bs_bar_def_strp }}" role="progressbar" data-transitiongoal-backup="2" aria-valuemin="1" aria-valuemax="6"></div></div>
+                <div class="{{ bs_pro_suc_strp }}{{ progress_style_extension }}"><div class="{{ bs_bar_suc_strp }}" role="progressbar" data-transitiongoal-backup="-50" aria-valuemin="-80" aria-valuemax="20"></div></div>
+                <div class="{{ bs_pro_inf_strp }}{{ progress_style_extension }}"><div class="{{ bs_bar_inf_strp }}" role="progressbar" data-transitiongoal-backup="450" aria-valuemax="900"></div></div>
+                <div class="{{ bs_pro_wrn_strp }}{{ progress_style_extension }}"><div class="{{ bs_bar_wrn_strp }}" role="progressbar" data-transitiongoal-backup="60" aria-valuemin="-100"></div></div>
+                <div class="{{ bs_pro_dng_strp }}{{ progress_style_extension }}"><div class="{{ bs_bar_dng_strp }}" role="progressbar" data-transitiongoal-backup="100"></div></div>
+            </div>
+            <script type='text/javascript'>
+                $(document).ready(function() {
+                    $('#{{ id_prefix }}-aria-start').click(function() {
+                        $('#{{ id_prefix }}-aria .{{ bs_bar_def }}').each(function () {
+                            var $pb = $(this);
+                            $pb.attr('data-transitiongoal', $pb.attr('data-transitiongoal-backup'));
+                            $pb.progressbar({{ script_extension }});
+                        });
+                    });
+                    $('#{{ id_prefix }}-aria-reset').click(function() {
+                        $('#{{ id_prefix }}-aria .{{ bs_bar_def }}').each(function () {
+                            var $pb = $(this);
+                            var valuemin = $pb.attr('aria-valuemin');
+                            var goal = valuemin < 0 ? valuemin : 0;
+                            $pb.attr('data-transitiongoal', goal);
+                            $pb.progressbar({{ script_extension }});
+                        });
+                    });
+                });
+            </script>
+        </div>
+{% highlight html %}
+<div class="{{ bs_pro_def_strp }}{{ progress_style_extension }}">
+    <div class="{{ bs_bar_def_strp }}" role="progressbar" data-transitiongoal="2" aria-valuemin="1" aria-valuemax="6"></div>
+</div>
+<div class="{{ bs_pro_suc_strp }}{{ progress_style_extension }}">
+    <div class="{{ bs_bar_suc_strp }}" role="progressbar" data-transitiongoal="40" aria-valuemin="-40" aria-valuemax="200"></div>
+</div>
+<div class="{{ bs_pro_inf_strp }}{{ progress_style_extension }}">
+    <div class="{{ bs_bar_inf_strp }}" role="progressbar" data-transitiongoal="60" aria-valuemax="120"></div>
+</div>
+<div class="{{ bs_pro_wrn_strp }}{{ progress_style_extension }}">
+    <div class="{{ bs_bar_wrn_strp }}" role="progressbar" data-transitiongoal="80" aria-valuemin="30"></div>
+</div>
+<div class="{{ bs_pro_dng_strp }}{{ progress_style_extension }}">
+    <div class="{{ bs_bar_dng_strp }}" role="progressbar" data-transitiongoal="100"></div>
+</div>
+
+$(document).ready(function() {
+    $('.{{ bs_pro_def }} .{{ bs_bar_def }}').progressbar({{ script_extension }});
+});
+{% endhighlight %}
+    </div>
+    <div class="tab-pane fade" id="{{ id_prefix }}-animation">
+        <h5>custom aria range progressbars <button type="button" class="btn btn-primary" id="{{ id_prefix }}-animation-start">start</button> <button type="button" class="btn btn-danger" id="{{ id_prefix }}-animation-reset">reset</button></h5>
+        <div class="bs-example">
+            <div class="{{ example_style_extension }}">
+                <div class="{{ bs_pro_def }}{{ progress_style_extension }}"><div class="{{ bs_bar_def }} six-sec-ease-in-out" role="progressbar" data-transitiongoal-backup="20"></div></div>
+                <div class="{{ bs_pro_suc }}{{ progress_style_extension }}"><div class="{{ bs_bar_suc }} six-sec-ease-in-out" role="progressbar" data-transitiongoal-backup="40"></div></div>
+                <div class="{{ bs_pro_inf }}{{ progress_style_extension }}"><div class="{{ bs_bar_inf }} six-sec-ease-in-out" role="progressbar" data-transitiongoal-backup="60"></div></div>
+                <div class="{{ bs_pro_wrn }}{{ progress_style_extension }}"><div class="{{ bs_bar_wrn }} six-sec-ease-in-out" role="progressbar" data-transitiongoal-backup="80"></div></div>
+                <div class="{{ bs_pro_dng }}{{ progress_style_extension }}"><div class="{{ bs_bar_dng }} six-sec-ease-in-out" role="progressbar" data-transitiongoal-backup="100"></div></div>
+            </div>
+            <script type='text/javascript'>
+                $(document).ready(function() {
+                    $('#{{ id_prefix }}-animation-start').click(function() {
+                        $('#{{ id_prefix }}-animation .{{ bs_bar_def }}').each(function () {
+                            var $pb = $(this);
+                            $pb.attr('data-transitiongoal', $pb.attr('data-transitiongoal-backup'));
+                            $pb.progressbar({{ script_extension }});
+                        });
+                    });
+                    $('#{{ id_prefix }}-animation-reset').click(function() {
+                        $('#{{ id_prefix }}-animation .{{ bs_bar_def }}').attr('data-transitiongoal', 0).progressbar({{ script_extension }});
+                    });
+                });
+            </script>
+        </div>
+{% highlight html %}
+.six-sec-ease-in-out {
+    -webkit-transition: width 6s ease-in-out;
+    -moz-transition: width 6s ease-in-out;
+    -ms-transition: width 6s ease-in-out;
+    -o-transition: width 6s ease-in-out;
+    transition: width 6s ease-in-out;
+}
+
+<div class="{{ bs_pro_def }}{{ progress_style_extension }}">
+    <div class="{{ bs_bar_def }} six-sec-ease-in-out" role="progressbar" data-transitiongoal="20"></div>
+</div>
+<div class="{{ bs_pro_suc }}{{ progress_style_extension }}">
+    <div class="{{ bs_bar_suc }} six-sec-ease-in-out" role="progressbar" data-transitiongoal="40"></div>
+</div>
+<div class="{{ bs_pro_inf }}{{ progress_style_extension }}">
+    <div class="{{ bs_bar_inf }} six-sec-ease-in-out" role="progressbar" data-transitiongoal="60"></div>
+</div>
+<div class="{{ bs_pro_wrn }}{{ progress_style_extension }}">
+    <div class="{{ bs_bar_wrn }} six-sec-ease-in-out" role="progressbar" data-transitiongoal="80"></div>
+</div>
+<div class="{{ bs_pro_dng }}{{ progress_style_extension }}">
+    <div class="{{ bs_bar_dng }} six-sec-ease-in-out" role="progressbar" data-transitiongoal="100"></div>
+</div>
+
+$(document).ready(function() {
+    $('.{{ bs_pro_def }} .{{ bs_bar_def }}').progressbar({{ script_extension }});
+});
+{% endhighlight %}
+    </div>
+</div>
+
+<div style="height: 40px">&nbsp;</div>

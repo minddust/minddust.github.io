@@ -1,7 +1,7 @@
 <!DOCTYPE html><!-- 01101101 01101001 01101110 01100100 01100100 01110101 01110011 01110100 -->
 <html lang="en">
     <head>
-        <title>{% if page.title %}{{ page.title }} &ndash; {% endif %}{{ site.domain }}</title>
+        <title>{{ site.domain }}{% if page.title %} &ndash; {{ page.title }}{% endif %}</title>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <meta name="author" content="{{ site.author.name }}">{% if page.description %}
@@ -9,6 +9,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="shortcut icon" href="/favicon.ico">
         <link rel="stylesheet" type="text/css" href="/res/minddust.min.css">
+        <script src="/res/common.min.js"></script>
         <link rel="alternate" type="application/rss+xml" title="{{ site.name }}" href="/feed.xml">
     </head>
     <body>
