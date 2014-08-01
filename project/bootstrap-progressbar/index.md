@@ -4,18 +4,19 @@ title: bootstrap-progressbar
 project: bootstrap-progressbar
 ---
 
-# bootstrap-progressbar - 0.8.0
+# bootstrap-progressbar - 0.8.1
 
 `bootstrap-progressbar` is a [jQuery](http://jquery.com) plugin which extends the basic [twitter-bootstrap](https://github.com/twbs/bootstrap) progressbar. It provides the ability to animate the progressbar by adding Javascript in combination with the preexisting css transitions. Additionally you can display the current progress information in the bar or get the value via callback.
 
 
-## What's new in v0.8.0?
+## What's new in v0.8.1?
 
 * Add bootstrap 3.2.0 styles
 * Extend `amount_format` hook for min value
 * Update demo page
 * Remove unused travis badge
 * Fix #27 switch `aria-valuetransitionsgoal` to `data-transitionsgoal`
+* Fix #35 wrong amount calculation for `aria-valuemin` != 0
 
 > __Note__: this version replaces the not official supported `aria-valuetransitionsgoal` with `data-transitionsgoal` which may affect (or brick) your progressbars.
 
@@ -31,7 +32,7 @@ project: bootstrap-progressbar
 
 ## Installation
 
-* Download the latest release: [v0.7.1](https://github.com/minddust/bootstrap-progressbar/archive/v0.8.0.zip)
+* Download the latest release: [v0.8.1](https://github.com/minddust/bootstrap-progressbar/archive/v0.8.1.zip)
 * Clone the repository: `git clone git@github.com:minddust/bootstrap-progressbar.git`
 * Install with [Bower](http://bower.io): `bower install bootstrap-progressbar`
 

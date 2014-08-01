@@ -5,7 +5,11 @@ project: bootstrap-progressbar
 permalink: changelog/
 ---
 
-## 0.8.0 (2014-07-30)
+## 0.8.1 (2014-08-01)
+
+* Fix #35 wrong amount calculation for `aria-valuemin` != 0
+
+## 0.8.0 (2014-08-01)
 
 * Add bootstrap 3.2.0 styles
 * Extend `amount_format` hook for min value
