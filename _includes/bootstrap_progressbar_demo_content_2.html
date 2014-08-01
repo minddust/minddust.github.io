@@ -1,14 +1,26 @@
 <a name="m-callback"></a>
-<h4>callbacks <button type="button" class="btn btn-primary" id="m-callback-start">start</button></h4>
+<h4>callbacks <button type="button" class="btn btn-primary" id="m-callback-start">start</button> <button type="button" class="btn btn-danger" id="m-callback-reset">reset</button></h4>
 
 <div class="bs-example m-callback">
-    <div class="{{ bs_pro_def }}"><div class="{{ bs_bar_def }}" role="progressbar" data-transitiongoal="100"></div></div>
+    <div class="{{ bs_pro_def }}"><div class="{{ bs_bar_def }}" role="progressbar" data-transitiongoal-backup="100"></div></div>
     <p>update: <span class="label label-info" id="m-callback-update"></span></p>
     <p>done: <span class="label label-success" id="m-callback-done"></span></p>
     <script type='text/javascript'>
         $(document).ready(function() {
             $('#m-callback-start').click(function() {
-                $('.m-callback .{{ bs_bar_def }}').progressbar({
+                $('#m-callback-update').html('');
+                $('#m-callback-done').html('');
+                var $pb = $('.m-callback .{{ bs_bar_def }}');
+                $pb.attr('data-transitiongoal', $pb.attr('data-transitiongoal-backup'));
+                $pb.progressbar({
+                    update: function(current_percentage) { $('#m-callback-update').html(current_percentage); },
+                    done: function() { $('#m-callback-done').html('yeah! done!'); }
+                });
+            });
+            $('#m-callback-reset').click(function() {
+                $('#m-callback-update').html('');
+                $('#m-callback-done').html('');
+                $('.m-callback .{{ bs_bar_def }}').attr('data-transitiongoal', 0).progressbar({
                     update: function(current_percentage) { $('#m-callback-update').html(current_percentage); },
                     done: function() { $('#m-callback-done').html('yeah! done!'); }
                 });

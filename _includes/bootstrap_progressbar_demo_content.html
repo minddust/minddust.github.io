@@ -22,7 +22,7 @@
                 $(document).ready(function() {
                     $('#{{ id_prefix }}-basic-start').click(function() {
                         var $pb = $('#{{ id_prefix }}-basic .{{ bs_bar_def }}');
-                        $pb.attr('data-transitiongoal', $pb.attr('data-transitiongoal-backup'))
+                        $pb.attr('data-transitiongoal', $pb.attr('data-transitiongoal-backup'));
                         $pb.progressbar({{ script_extension }});
                     });
                     $('#{{ id_prefix }}-basic-reset').click(function() {
