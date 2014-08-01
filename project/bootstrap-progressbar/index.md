@@ -20,7 +20,7 @@ project: bootstrap-progressbar
 
 > __Note__: this version replaces the not official supported `aria-valuetransitionsgoal` with `data-transitionsgoal` which may affect (or brick) your progressbars.
 
-> __Note__: Bootstrap's [low percentage styles](http://getbootstrap.com/components/#progress-low-percentages) (introduced in 3.2.0) causes flickring under some circumstances (e.g. slow transitions). I'm currently working on 0.8.1 to fix that.
+> __Note__: Bootstrap's [low percentage styles](http://getbootstrap.com/components/#progress-low-percentages) (introduced in 3.2.0) causes flickring under some circumstances (e.g. slow transitions). I'm currently working on 0.8.2 to fix that.
 
 > __Note__: Stacked progressbars are not supported by now.
 
