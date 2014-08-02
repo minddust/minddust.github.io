@@ -4,7 +4,7 @@ title: bootstrap-progressbar
 project: bootstrap-progressbar
 ---
 
-# bootstrap-progressbar - 0.8.1
+# bootstrap-progressbar - 0.8.2
 
 `bootstrap-progressbar` is a [jQuery](http://jquery.com) plugin which extends the basic [twitter-bootstrap](https://github.com/twbs/bootstrap) progressbar. It provides the ability to animate the progressbar by adding Javascript in combination with the preexisting css transitions. Additionally you can display the current progress information in the bar or get the value via callback.
 
@@ -21,7 +21,7 @@ project: bootstrap-progressbar
 
 > __Note__: this version replaces the not official supported `aria-valuetransitionsgoal` with `data-transitionsgoal` which may affect (or brick) your progressbars.
 
-> __Note__: Bootstrap's [low percentage styles](http://getbootstrap.com/components/#progress-low-percentages) (introduced in 3.2.0) causes flickring under some circumstances (e.g. slow transitions). I'm currently working on 0.8.2 to fix that.
+> __Note__: Bootstrap's [low percentage styles](http://getbootstrap.com/components/#progress-low-percentages) (introduced in 3.2.0) causes flickring under some circumstances (e.g. slow transitions). I'm currently working on 0.8.3 to fix that.
 
 > __Note__: Stacked progressbars are not supported by now.
 
@@ -33,7 +33,7 @@ project: bootstrap-progressbar
 
 ## Installation
 
-* Download the latest release: [v0.8.1](https://github.com/minddust/bootstrap-progressbar/archive/v0.8.1.zip)
+* Download the latest release: [v0.8.2](https://github.com/minddust/bootstrap-progressbar/archive/v0.8.2.zip)
 * Clone the repository: `git clone git@github.com:minddust/bootstrap-progressbar.git`
 * Install with [Bower](http://bower.io): `bower install bootstrap-progressbar`
 
@@ -167,7 +167,7 @@ It takes 1 argument which is the current percent value.
 
 Is a function which returns the text format for progressbar with `use_percentage: false`.
 
-It takes 2 argument which are the current and total amount.
+It takes 3 argument which are the current-, the max- and the min-amount.
 
 ### update
 
@@ -175,11 +175,13 @@ Is a callback function which will be called while the progressbar is transitioni
 
 Depends on `refresh_speed`.
 
-It takes 1 argument which is the current percent value.
+It takes 2 argument which is the current percent value and a reference to the attached progressbar element.
 
 ### done
 
 Is a callback function which will be called when the transition process is done.
+
+It takes 1 argument which is a reference to the attached progressbar element.
 
 ### fail
 
