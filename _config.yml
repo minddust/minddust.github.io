@@ -7,7 +7,7 @@ relative_permalinks: true
 redcarpet:
   extensions: [autolink]
 
-exclude: [README.md, TODO.md, LICENSE, Gulpfile.js, package.json]
+exclude: [README.md, TODO.md, LICENSE, node_modules, Makefile, Gulpfile.js, package.json]
 
 paginate: 5
 paginate_path: '/blog/:num'
