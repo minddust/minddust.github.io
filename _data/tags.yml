@@ -18,6 +18,12 @@
 
 - slug: github
   name: GitHub
+
+- slug: github-pages
+  name: GitHub Pages
+
+- slug: jekyll
+  name: Jekyll
   
 - slug: open-source
   name: Open Source

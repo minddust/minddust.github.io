@@ -2,7 +2,7 @@
 layout: post
 title: Switch To GitHub Pages
 category: general
-tags: [github]
+tags: [github, github-pages]
 ---
 
 Today I switched from my former vps + django setup to github + jekyll aka [GitHub Pages](http://pages.github.com/).
