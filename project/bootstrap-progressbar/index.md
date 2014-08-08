@@ -18,7 +18,7 @@ project: bootstrap-progressbar
 * Fix #27 switch `aria-valuetransitionsgoal` to `data-transitionsgoal`
 * Fix #35 wrong amount calculation for `aria-valuemin` != 0
 * Fix #33 pass `$this` to `update` and `done` callback
-* Fix #39 revert low percentage style in bootstrap 3.2
+* Fix #39 revert low percentage styles in bootstrap 3.2
 
 > __Note__: this version replaces the not official supported `aria-valuetransitionsgoal` with `data-transitionsgoal` which may affect (or brick) your progressbars.
 
