@@ -21,3 +21,5 @@ There are services like [flaticon.com](http://www.flaticon.com/) but he wanted s
 So after a 12 hour hackathon we came up with [fa2png.io](http://fa2png.io/)
 
 Yea! That's it. Hope you like it.
+
+<img src="/res/fa2png/screenshot.png" class="img-responsive">
