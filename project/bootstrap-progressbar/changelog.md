@@ -5,6 +5,10 @@ project: bootstrap-progressbar
 permalink: changelog/
 ---
 
+## 0.8.3 (2014-08-02)
+
+# Fix #39 revert low percentage style in bootstrap 3.2
+
 ## 0.8.2 (2014-08-02)
 
 * Fix #33 pass `$this` to `update` and `done` callback
