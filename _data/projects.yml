@@ -71,3 +71,12 @@
   has_changelog: false
   has_demo: false
   has_github: false
+
+- slug: google-ui-colors
+  title: google-ui-colors
+  subtitle: less / scss version of Google's ui color palette
+  has_gallery: false
+  has_changelog: false
+  has_demo: false
+  has_github: true
+  github: https://github.com/minddust/google-ui-colors
