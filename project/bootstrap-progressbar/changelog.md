@@ -5,6 +5,10 @@ project: bootstrap-progressbar
 permalink: changelog/
 ---
 
+## 0.8.4 (2014-11-05)
+
+* Add bootstrap 3.3.0 styles
+
 ## 0.8.3 (2014-08-08)
 
 * Fix #39 revert low percentage styles in bootstrap 3.2
