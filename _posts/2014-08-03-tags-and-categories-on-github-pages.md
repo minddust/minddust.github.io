@@ -31,6 +31,7 @@ Here is a little guide how to implement it yourself:
 
     ```html+django
     {% raw %}
+    {% assign post = page %}
     {% if post.tags.size > 0 %}
         {% capture tags_content %}Posted with {% if post.tags.size == 1 %}<i class="fa fa-tag"></i>{% else %}<i class="fa fa-tags"></i>{% endif %}: {% endcapture %}
         {% for post_tag in post.tags %}
@@ -100,3 +101,9 @@ Here is a little guide how to implement it yourself:
     ```
     
 For a more complex implementation and categories: [check out my repository](https://github.com/minddust/minddust.github.io)
+
+---
+
+**Updates** (Feb. 12, 2015):
+
+* Added missing `{% assign post = page %}` (thanks [Christopher Rodriguez](https://github.com/cdr255))
