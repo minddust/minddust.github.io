@@ -14,6 +14,6 @@ To make this project more flexible and future proof I decided to build everythin
 
 It took me about 3 weeks from the first line of code to the first release.
 
-If you are interested in the project: [check it out www.pixelmaker.io](https://www.pixelmaker.io/)
+If you are interested in the project: [check it out at www.pixelmaker.io](https://www.pixelmaker.io/)
 
 <img src="/res/pixelmaker/screenshot.jpg" class="img-responsive">
