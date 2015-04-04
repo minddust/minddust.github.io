@@ -1,6 +1,6 @@
-- slug: fa2png
-  title: fa2png.io
-  subtitle: Font-Awesome to PNG online converter
+- slug: pixelmaker
+  title: pixelmaker.io
+  subtitle: Icon-Font-To-PNG-Online-Converter
   has_gallery: false
   has_changelog: false
   has_demo: false
@@ -14,6 +14,14 @@
   has_demo: true
   has_github: true
   github: https://github.com/minddust/bootstrap-progressbar
+
+- slug: fa2png
+  title: fa2png.io
+  subtitle: Font-Awesome to PNG online converter
+  has_gallery: false
+  has_changelog: false
+  has_demo: false
+  has_github: false
 
 - slug: jquery-pjaxr
   title: jQuery-pjaxr
