@@ -4,13 +4,17 @@ title: bootstrap-progressbar
 project: bootstrap-progressbar
 ---
 
-# bootstrap-progressbar - 0.8.4
+# bootstrap-progressbar - 0.8.5
 
 `bootstrap-progressbar` is a [jQuery](http://jquery.com) plugin which extends the basic [twitter-bootstrap](https://github.com/twbs/bootstrap) progressbar. It provides the ability to animate the progressbar by adding Javascript in combination with the preexisting css transitions. Additionally you can display the current progress information in the bar or get the value via callback.
 
 
-## What's new in v0.8.0 - v0.8.4?
+## What's new in v0.8.0 - v0.8.5?
 
+* Add SCSS support
+* Add bootstrap 3.3.4 styles
+* Add bootstrap 3.3.2 styles
+* Add bootstrap 3.3.1 styles
 * Add bootstrap 3.3.0 styles
 * Add bootstrap 3.2.0 styles
 * Extend `amount_format` hook for min value
@@ -35,7 +39,7 @@ project: bootstrap-progressbar
 
 ## Installation
 
-* Download the latest release: [v0.8.4](https://github.com/minddust/bootstrap-progressbar/archive/v0.8.4.zip)
+* Download the latest release: [v0.8.5](https://github.com/minddust/bootstrap-progressbar/archive/v0.8.5.zip)
 * Clone the repository: `git clone git@github.com:minddust/bootstrap-progressbar.git`
 * Install with [Bower](http://bower.io): `bower install bootstrap-progressbar`
 
@@ -82,19 +86,25 @@ project: bootstrap-progressbar
     * for the horizontal bar with no or filled text: __NO__
     * for any vertical bars or the horizontal bar with centered text or right aligned bar: __YES__
 
-       less:
+        less:
 
-       ```html
-       <link rel="stylesheet/less" type="text/css" href="bootstrap-progressbar.less">
-       ```
+        ```html
+        <link rel="stylesheet/less" type="text/css" href="bootstrap-progressbar.less">
+        <script src="less.js" type="text/javascript"></script>
+        ```
 
-       css:
+        or precompile it yourself. (see: [3rd party compilers](http://lesscss.org/usage/#third-party-compilers-node-js-compilers))
 
-       ```html
-       <link rel="stylesheet" type="text/css" href="bootstrap-progressbar.css">
-       ```
+        scss:
+        * need to precompile it yourself (see: [libsass](http://sass-lang.com/libsass))
 
-       you can find your needed css or less file inside the css or less folder.
+        css:
+
+        ```html
+        <link rel="stylesheet" type="text/css" href="bootstrap-progressbar.css">
+        ```
+
+        you can find your needed css, less or scss files inside the specific subdirectories.
 
 * Multiple trigger
 
@@ -223,6 +233,13 @@ to change the animation itself you have to overwrite either less or css
             .transition(width 2s ease-in-out);
         }
         ```
+    * scss
+
+        ```css
+        .progress.vertical .progress-bar {
+            @include transition(width 2s ease-in-out);
+        }
+        ```
     * css
 
         ```css
@@ -243,6 +260,13 @@ to change the animation itself you have to overwrite either less or css
             .transition(height 2s ease-in-out);
         }
         ```
+    * scss
+
+        ```css
+        .progress.vertical .bar {
+            @include transition(height 2s ease-in-out);
+        }
+        ```
     * css
 
         ```css
@@ -261,6 +285,6 @@ to change the animation itself you have to overwrite either less or css
 
 ## Copyright and license
 
-Copyright 2013-2014 Stephan Groß, under [MIT license](https://github.com/minddust/bootstrap-progressbar/blob/master/LICENSE).
+Copyright 2013-2015 Stephan Groß, under [MIT license](https://github.com/minddust/bootstrap-progressbar/blob/master/LICENSE).
 
 Want to appreciate my work? [minddust at Gittip](https://www.gittip.com/minddust/)

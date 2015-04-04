@@ -5,6 +5,12 @@ project: bootstrap-progressbar
 permalink: changelog/
 ---
 
+## 0.8.5 (2015-04-04)
+
+* Add bootstrap 3.3.1-3.3.4 styles
+* Add SCSS support (request #46)
+* Fix #42 wrong version name
+
 ## 0.8.4 (2014-11-05)
 
 * Add bootstrap 3.3.0 styles

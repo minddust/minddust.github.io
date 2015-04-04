@@ -7,6 +7,9 @@ permalink: demo/
 
 **Bootstrap 3**
 
+* [3.3.4]({{ page.url }}bootstrap-3-3-4/)
+* [3.3.2]({{ page.url }}bootstrap-3-3-2/)
+* [3.3.1]({{ page.url }}bootstrap-3-3-1/)
 * [3.3.0]({{ page.url }}bootstrap-3-3-0/)
 * [3.2.0]({{ page.url }}bootstrap-3-2-0/)
 * [3.1.1]({{ page.url }}bootstrap-3-1-1/)
