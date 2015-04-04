@@ -2,7 +2,7 @@
 layout: project_changelog
 title: jQuery-pjaxr
 project: jquery-pjaxr
-permalink: changelog/
+permalink: /project/jquery-pjaxr/changelog/
 ---
 
 ## 1.1.0 (2013-11-21)

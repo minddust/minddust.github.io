@@ -2,7 +2,7 @@
 layout: project_changelog
 title: bootstrap-progressbar
 project: bootstrap-progressbar
-permalink: changelog/
+permalink: /project/bootstrap-progressbar/changelog/
 ---
 
 ## 0.8.5 (2015-04-04)

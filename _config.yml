@@ -2,7 +2,6 @@ timezone: Europe/Berlin
 highlighter: pygments
 markdown: redcarpet
 permalink: /post/:title
-relative_permalinks: true
 
 redcarpet:
   extensions: [autolink]

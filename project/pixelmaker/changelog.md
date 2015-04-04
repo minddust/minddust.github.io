@@ -2,7 +2,7 @@
 layout: project_changelog
 title: pixelmaker
 project: pixelmaker
-permalink: changelog/
+permalink: /project/pixelmaker/changelog/
 ---
 
 ## 1.1.0 (2015-04-03)

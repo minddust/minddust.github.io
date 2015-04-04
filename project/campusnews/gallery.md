@@ -2,7 +2,5 @@
 layout: project_gallery
 title: Campusnews
 project: campusnews
-permalink: gallery/
+permalink: /project/campusnews/gallery/
 ---
-
-pjaxr test

@@ -2,7 +2,7 @@
 layout: project_demo
 title: bootstrap-progressbar
 project: bootstrap-progressbar
-permalink: demo/
+permalink: /project/bootstrap-progressbar/demo/
 ---
 
 **Bootstrap 3**

@@ -5,7 +5,7 @@ category: programming
 tags: [github, github-pages, jekyll]
 ---
 
-[GitHub Pages](http://pages.github.com/) service is just awesome! 
+[GitHub Pages](http://pages.github.com/) service is just awesome!
 
 And with the jekyll integration it even get’s more awesome! :D
 
@@ -18,7 +18,7 @@ As you may know:
 
 * no tag / category plugins are (currently) available.
 
-Sad.. But that was something I really wanted to have! 
+Sad.. But that was something I really wanted to have!
 
 So I built my own Data-Template-NoPlugin-System and it works.
 
@@ -27,7 +27,7 @@ You can see a live demo on this page.
 
 Here is a little guide how to implement it yourself:
 
-1. add some template logic on top of your __post layout__ 
+1. add some template logic on top of your __post layout__
 
     ```html+django
     {% raw %}
@@ -50,13 +50,13 @@ Here is a little guide how to implement it yourself:
     {% endif %}
     {% endraw %}
     ```
- 
+
 2. place the generated tag content wherever you like inside your __post layout__
 
     ```html
     <p id="post-meta">{% raw %}{{ tags_content }}{% endraw %}</p>
     ```
-    
+
 3. create a __blog\_by\_tag__ layout
 
     ```html
@@ -71,7 +71,7 @@ Here is a little guide how to implement it yourself:
         {% raw %}{% endif %}{% endraw %}
     </div>
     ```
-    
+
 4. annotate your __post entry__ front-matter block as usual:
 
     ```yaml
@@ -82,24 +82,24 @@ Here is a little guide how to implement it yourself:
     tags: [github, github-pages, jekyll]
     ---
     ```
-    
+
 5. for every used tag you have to add an entry inside your __\_data/tags.yml__
 
     ```yaml
     - slug: github-pages
       name: GitHub Pages
     ```
-    
+
 6. for every used tag you have to add an empty template - e.g. __blog/tag/github-pages.md__
 
     ```yaml
     ---
     layout: blog_by_tag
     tag: github-pages
-    permalink: github-pages/
+    permalink: /blog/tag/github-pages/
     ---
     ```
-    
+
 For a more complex implementation and categories: [check out my repository](https://github.com/minddust/minddust.github.io)
 
 ---
@@ -107,3 +107,7 @@ For a more complex implementation and categories: [check out my repository](http
 **Updates** (Feb. 12, 2015):
 
 * Added missing `{% assign post = page %}` (thanks [Christopher Rodriguez](https://github.com/cdr255))
+
+**Updates** (Apr. 4, 2015):
+
+* Switch to absolute permalinks (which is forced by jekyll 2.0+)
