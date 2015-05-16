@@ -1,6 +1,6 @@
 /*!
- * bootstrap-progressbar v0.8.5 by @minddust
- * Copyright (c) 2012-2014 Stephan Groß
+ * bootstrap-progressbar v0.9.0 by @minddust
+ * Copyright (c) 2012-2015 Stephan Groß
  *
  * http://www.minddust.com/project/bootstrap-progressbar/
  *
@@ -142,6 +142,10 @@
             var $this = $(this);
             var data = $this.data('bs.progressbar');
             var options = typeof option === 'object' && option;
+
+            if (data && options) {
+                $.extend(data.options, options);
+            }
 
             if (!data) {
                 $this.data('bs.progressbar', (data = new Progressbar(this, options)));

@@ -5,6 +5,11 @@ project: bootstrap-progressbar
 permalink: /project/bootstrap-progressbar/changelog/
 ---
 
+## 0.9.0 (2015-05-15)
+
+* Fix #49 runtime option override support
+* Fix #48 extend bower.json
+
 ## 0.8.5 (2015-04-04)
 
 * Add bootstrap 3.3.1-3.3.4 styles
