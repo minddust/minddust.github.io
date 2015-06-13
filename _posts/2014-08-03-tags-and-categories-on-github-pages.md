@@ -111,3 +111,37 @@ For a more complex implementation and categories: [check out my repository](http
 **Updates** (Apr. 4, 2015):
 
 * Switch to absolute permalinks (which is forced by jekyll 2.0+)
+
+**Updates** (June 14, 2015):
+
+* [Róbert Papp](https://github.com/TWiStErRob) suggested ([here](https://github.com/minddust/minddust.github.io/issues/5)) a restructuring of the data content so you can simplify the lookups. Thanks!
+
+    **before**
+
+    ```yaml
+    - slug: github-pages
+      name: GitHub Pages
+    ```
+
+    ```yaml
+    {% raw %}
+    {% for post_tag in post.tags %}
+        {% for data_tag in site.data.tags %}
+            {% if data_tag.slug == post_tag %}
+                {% assign tag = data_tag %}
+    {% endraw %}
+    ```
+
+    **after**
+
+    ```yaml
+    github-pages:
+      name: GitHub Pages
+    ```
+
+    ```yaml
+    {% raw %}
+    {% for post_tag in post.tags %}
+        {% assign tag = site.data.tags[post_tag] %}
+    {% endraw %}
+    ```
