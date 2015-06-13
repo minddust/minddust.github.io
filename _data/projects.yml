@@ -29,7 +29,8 @@
   has_gallery: false
   has_changelog: true
   has_demo: false
-  has_github: https://github.com/minddust/jquery-pjaxr
+  has_github: true
+  github: https://github.com/minddust/jquery-pjaxr
 
 - slug: campusnews
   title: Campusnews
