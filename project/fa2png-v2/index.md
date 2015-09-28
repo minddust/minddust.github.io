@@ -1,10 +1,10 @@
 ---
 layout: project_overview
-title: pixelmaker
-project: pixelmaker
+title: fa2png-v2
+project: fa2png-v2
 ---
 
-[Pixelmaker](https://www.pixelmaker.io/) is an Icon-Font-To-PNG-Online-Converter.
+[fa2png-v2](http://fa2png.io/) is an Icon-Font-To-PNG-Online-Converter.
 
 It's the successor of [fa2png](http://fa2png.io/) which I build in 2014 with one of my friends [Jannik](http://jannikweyrich.com/).
 
@@ -14,6 +14,6 @@ To make this project more flexible and future proof I decided to build everythin
 
 It took me about 3 weeks from the first line of code to the first release.
 
-If you are interested in the project: [check it out at www.pixelmaker.io](https://www.pixelmaker.io/)
+If you are interested in the project: [check it out at fa2png.io](http://fa2png.io/)
 
-<img src="/res/pixelmaker/screenshot.jpg" class="img-responsive">
+<img src="/res/fa2png-v2/screenshot.jpg" class="img-responsive">
