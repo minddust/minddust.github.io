@@ -1,5 +1,4 @@
 ---
-layout: project_overview
 title: bootstrap-progressbar
 project: bootstrap-progressbar
 ---
@@ -28,40 +27,39 @@ project: bootstrap-progressbar
 
 ## Installation
 
-* Download the latest release: [v0.8.5](https://github.com/minddust/bootstrap-progressbar/archive/v0.8.5.zip)
+* Download the latest release: [v0.9.0](https://github.com/minddust/bootstrap-progressbar/archive/v0.9.0.zip)
 * Clone the repository: `git clone git@github.com:minddust/bootstrap-progressbar.git`
 * Install with [Bower](http://bower.io): `bower install bootstrap-progressbar`
 
 
 ## Usage
 
-1. include `bootstrap-progressbar.js`
+1.  include `bootstrap-progressbar.js`
 
-    ```html
+    ``` html
     <script type="text/javascript" src="bootstrap-progressbar.js"></script>
     ```
 
-2. activate `bootstrap-progressbar` functionality on progressbars of your choice:
+2.  activate `bootstrap-progressbar` functionality on progressbars of your choice:
 
-
-    ```javascript
+    ``` javascript
     $('.progress .bar').progressbar();           // bootstrap 2
     $('.progress .progress-bar').progressbar();  // bootstrap 3
     ```
 
-3. set the `aria` attribute and __remove__ the `width` style attribute (alternatively you can set it to 0)
+3.  set the `aria` attribute and __remove__ the `width` style attribute (alternatively you can set it to 0)
 
-    1. `data-transitiongoal`
+    1.  `data-transitiongoal`
 
-        ```html
+        ``` html
         <div class="progress">
             <div class="progress-bar" data-transitiongoal="75"></div>
         </div>
         ```
 
-    2. `aria-valuemin` (default: 0) and `aria-valuemax` (default: 100)
+    2.  `aria-valuemin` (default: 0) and `aria-valuemax` (default: 100)
 
-        ```html
+        ``` html
         <div class="progress">
             <div class="progress-bar" data-transitiongoal="75" aria-valuemin="-1337" aria-valuemax="9000"></div>
         </div>
@@ -70,10 +68,10 @@ project: bootstrap-progressbar
 
 ## Usage Extended
 
-* Do I need the additional style file?
+*   Do I need the additional style file?
 
-    * for the horizontal bar with no or filled text: __NO__
-    * for any vertical bars or the horizontal bar with centered text or right aligned bar: __YES__
+    *   for the horizontal bar with no or filled text: __NO__
+    *   for any vertical bars or the horizontal bar with centered text or right aligned bar: __YES__
 
         less:
 
@@ -85,17 +83,18 @@ project: bootstrap-progressbar
         or precompile it yourself. (see: [3rd party compilers](http://lesscss.org/usage/#third-party-compilers-node-js-compilers))
 
         scss:
-        * need to precompile it yourself (see: [libsass](http://sass-lang.com/libsass))
+
+        *   need to precompile it yourself (see: [libsass](http://sass-lang.com/libsass))
 
         css:
 
-        ```html
+        ``` html
         <link rel="stylesheet" type="text/css" href="bootstrap-progressbar.css">
         ```
 
         you can find your needed css, less or scss files inside the specific subdirectories.
 
-* Multiple trigger
+*   Multiple trigger
 
     You can trigger progressbar as much as you want. Just change your attribute(s) and trigger `.progressbar()` again. All settings made before will be kept.
 
@@ -104,7 +103,7 @@ project: bootstrap-progressbar
 
 ### default values
 
-```javascript
+``` javascript
 Progressbar.defaults = {
     transition_delay: 300,
     refresh_speed: 50,
@@ -124,7 +123,7 @@ Is the time in milliseconds until the animation starts.
 
 This could be useful to delay the start on the initial page load like:
 
-```javascript
+``` javascript
 $(document).ready(function() {
     $('.progress .progress-bar').progressbar({
         transition_delay: 1500
@@ -194,44 +193,50 @@ It takes 1 argument which is the error message.
 ## Customisation
 
 ### alignment
-* to use a horizontal progressbar which is align to the right you have to add `right` to the `progress` element.
 
-   ```html
-   <div class="progress right">
-   ```
-* to use a vertical progressbar you have to add `vertical` to the `progress` element.
+*   to use a horizontal progressbar which is align to the right you have to add `right` to the `progress` element.
 
-   ```html
-   <div class="progress vertical">
-   ```
-* to use a vertical progressbar which is align to the bottom you have to add `vertical` and `bottom` to the `progress` element.
+    ``` html
+    <div class="progress right">
+    ```
 
-   ```html
-   <div class="progress vertical bottom">
-   ```
+*   to use a vertical progressbar you have to add `vertical` to the `progress` element.
+
+    ``` html
+    <div class="progress vertical">
+    ```
+
+*   to use a vertical progressbar which is align to the bottom you have to add `vertical` and `bottom` to the `progress` element.
+
+    ``` html
+    <div class="progress vertical bottom">
+    ```
 
 ### animation
 
 to change the animation itself you have to overwrite either less or css
 
-1. horizontal
-    * less
+1.  horizontal
 
-        ```css
+    *   less
+
+        ``` css
         .progress .bar {
             .transition(width 2s ease-in-out);
         }
         ```
-    * scss
 
-        ```css
+    *   scss
+
+        ``` css
         .progress.vertical .progress-bar {
             @include transition(width 2s ease-in-out);
         }
         ```
-    * css
 
-        ```css
+    *   css
+
+        ``` css
         .progress .bar {
             -webkit-transition: width 2s ease-in-out;
             -moz-transition: width 2s ease-in-out;
@@ -241,24 +246,27 @@ to change the animation itself you have to overwrite either less or css
         }
         ```
 
-1. vertical
-    * less
+1.  vertical
 
-        ```css
+    *   less
+
+        ``` css
         .progress.vertical .bar {
             .transition(height 2s ease-in-out);
         }
         ```
-    * scss
 
-        ```css
+    *   scss
+
+        ``` css
         .progress.vertical .bar {
             @include transition(height 2s ease-in-out);
         }
         ```
-    * css
 
-        ```css
+    *   css
+
+        ``` css
         .progress.vertical .bar {
             -webkit-transition: height 2s ease-in-out;
             -moz-transition: height 2s ease-in-out;
@@ -268,12 +276,12 @@ to change the animation itself you have to overwrite either less or css
         }
         ```
 
+
 ## Known Problems
 
 * Looks like iOS Safari is flooring the width of the transition. So if you want to display text with a correct value you have to use a full bar width **greater or equal 100px**.
 
+
 ## Copyright and license
 
 Copyright 2013-2015 Stephan Groß, under [MIT license](https://github.com/minddust/bootstrap-progressbar/blob/master/LICENSE).
-
-Want to appreciate my work? [minddust at Gittip](https://www.gittip.com/minddust/)

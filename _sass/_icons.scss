@@ -1,0 +1,32 @@
+@font-face {
+  font-family: 'icomoon';
+  src:
+    url('/assets/icomoon.ttf?5jsxum') format('truetype'),
+    url('/assets/icomoon.woff?5jsxum') format('woff'),
+    url('/assets/icomoon.svg?5jsxum#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-quill:before      { content: "\e907"; }
+.icon-price-tag:before  { content: "\e935"; }
+.icon-price-tags:before { content: "\e936"; }
+.icon-rocket:before     { content: "\e9a5"; }
+.icon-twitter:before    { content: "\ea96"; }
+.icon-rss:before        { content: "\eab4"; }
+.icon-github:before     { content: "\eab0"; }

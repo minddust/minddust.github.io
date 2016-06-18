@@ -1,5 +1,4 @@
 ---
-layout: project_changelog
 title: fa2png-v2
 project: fa2png-v2
 permalink: /project/fa2png-v2/changelog/

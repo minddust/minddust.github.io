@@ -1,10 +1,7 @@
 ---
-layout: project_overview
 title: jQuery-pjaxr
 project: jquery-pjaxr
 ---
-
-[![Build Status](https://secure.travis-ci.org/minddust/jquery-pjaxr.png)](http://travis-ci.org/minddust/jquery-pjaxr)
 
 jquery-pjaxr is [jQuery](http://jquery.com/) plugin that uses ajax and pushState to deliver a fast browsing experience.
 
@@ -29,14 +26,14 @@ I hope pjaxr will help people who are running into the same problems like I did.
 
 There is already an awesome plugin called [jquery-pjax](https://github.com/defunkt/jquery-pjax) on which this project is based.  For not breaking existing frontends but to support the same port to the server this library is named **pjaxr** and accepts the same header **X-PJAX**.
 
-> There are still many testcases missing but the most signicant are setup. PR's are welcome.
+> There are still many testcases missing but the most significant are setup. PR's are welcome.
 
 
 ## Installation
 
-* Download the latest release: [v1.1.0](https://github.com/minddust/jquery-pjaxr/archive/v1.1.0.zip)
-* Clone the repository: `git clone git@github.com:minddust/jquery-pjaxr.git`.
-* Curl the library: `curl -O https://raw.github.com/minddust/jquery-pjaxr/master/jquery.pjaxr.min.js`
+* Download latest release: [v1.1.0](https://github.com/minddust/jquery-pjaxr/archive/v1.1.0.zip)
+* Clone repository: `git clone git@github.com:minddust/jquery-pjaxr.git`.
+* Curl: `curl -O https://raw.github.com/minddust/jquery-pjaxr/master/jquery.pjaxr.min.js`
 * Install with [Bower](http://bower.io): `bower install jquery-pjaxr`.
 
 

@@ -1,4 +1,4 @@
-- slug: fa2png-v2
+fa2png-v2:
   title: fa2png.io - v2
   subtitle: Icon-Font-To-PNG-Online-Converter
   has_gallery: false
@@ -6,7 +6,7 @@
   has_demo: false
   has_github: false
 
-- slug: bootstrap-progressbar
+bootstrap-progressbar:
   title: bootstrap-progressbar
   subtitle: jQuery plugin for twitter bootstrap's progressbar (v2 & v3) for displaying text and animations
   has_gallery: false
@@ -15,7 +15,7 @@
   has_github: true
   github: https://github.com/minddust/bootstrap-progressbar
 
-- slug: fa2png
+fa2png:
   title: fa2png.io
   subtitle: Font-Awesome to PNG online converter
   has_gallery: false
@@ -23,7 +23,16 @@
   has_demo: false
   has_github: false
 
-- slug: jquery-pjaxr
+lare-js:
+  title: lare.js
+  subtitle: Lightweight Ajax Replacement Engine
+  has_gallery: false
+  has_changelog: false
+  has_demo: false
+  has_github: true
+  github: https://github.com/lare-team/lare.js
+
+jquery-pjaxr:
   title: jQuery-pjaxr
   subtitle: Pushstate aJAX eXtended Replacements
   has_gallery: false
@@ -32,7 +41,7 @@
   has_github: true
   github: https://github.com/minddust/jquery-pjaxr
 
-- slug: campusnews
+campusnews:
   title: Campusnews
   subtitle: university information system for mobile devices including cafeteria, bus connections, courses, map, news feeds, mailing
   has_gallery: true
@@ -73,7 +82,7 @@
   - campusnews_31_about.jpg
   - campusnews_32_about_simpsons.jpg
 
-- slug: django-spaceless-except-pre
+django-spaceless-except-pre:
   title: Django spaceless_except_pre
   subtitle: Spaceless With Preserved Pre Formatting
   has_gallery: false
@@ -81,7 +90,7 @@
   has_demo: false
   has_github: false
 
-- slug: google-ui-colors
+google-ui-colors:
   title: google-ui-colors
   subtitle: less / scss version of Google's ui color palette
   has_gallery: false

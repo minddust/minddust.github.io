@@ -1,5 +1,4 @@
 ---
-layout: project_demo
 title: bootstrap-progressbar
 project: bootstrap-progressbar
 permalink: /project/bootstrap-progressbar/demo/

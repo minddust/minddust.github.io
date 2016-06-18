@@ -1,5 +1,4 @@
 ---
-layout: project_overview
 title: google-ui-colors
 project: google-ui-colors
 ---

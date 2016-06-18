@@ -1,0 +1,144 @@
+.label-darkblue {
+  background-color: $color-darkblue;
+  border-radius: 0;
+  border: 1px solid $color-darkblue;
+  color: #fff;
+  &[href] {
+    &:hover,
+    &:focus {
+      background-color: #fff;
+      color: $color-darkblue;
+    }
+  }
+}
+
+.tooltip {
+  position: relative;
+}
+
+.tooltip:hover:after {
+  background: #333;
+  background: rgba(0, 0, 0, .8);
+  top: 32px;
+  color: #fff;
+  content: attr(title);
+  left: 0;
+  padding: 5px 15px;
+  position: absolute;
+  z-index: 98;
+  font-size: 12px;
+}
+
+.tooltip:hover:before {
+  border: solid;
+  border-color: #333 transparent;
+  border-width: 0 6px 6px 6px;
+  top: 26px;
+  content: "";
+  left: 30%;
+  position: absolute;
+  z-index: 99;
+}
+
+.contact {
+  @include user-select(none);
+
+  .mail {
+    unicode-bidi:bidi-override;
+    direction: rtl;
+
+    &:before { content: "moc.tsuddnim" }
+    &:after { content: "tcatnoc" }
+  }
+}
+
+.nav-inline a.nav-link:focus,
+.nav-inline a.nav-link:hover {
+  box-shadow: inset 0 -3px 0 $link-hover-color;
+}
+
+.nav-inline a.nav-link.active,
+.nav-inline a.nav-link.active:focus,
+.nav-inline a.nav-link.active:hover {
+  color: $color-darkblue;
+  box-shadow: inset 0 -3px 0 $color-darkblue;
+}
+
+.user-select-none {
+  @include user-select(none);
+}
+
+// bootstrap overrides
+.list-group-item {
+  border-left: 0;
+  border-right: 0;
+}
+
+.list-group-item-heading {
+  margin-bottom: 0;
+}
+
+.list-group-item .media-object {
+  width: 179px;
+}
+
+@include media-breakpoint-down(xs) {
+  .list-group-item .media-object {
+    width: 89px;
+  }
+
+  .list-group-item .media-heading {
+    font-size: $font-size-base;
+  }
+}
+
+.b-lazy {
+    -webkit-transition: opacity 500ms ease-in-out;
+       -moz-transition: opacity 500ms ease-in-out;
+         -o-transition: opacity 500ms ease-in-out;
+            transition: opacity 500ms ease-in-out;
+             max-width: 100%;
+               opacity: 0;
+                 width: 50%;  // retina gallery + initial size to avoid bulk loading
+}
+.b-lazy.b-loaded {
+               opacity: 1;
+}
+
+blockquote {
+  @extend .blockquote;
+}
+
+.callout {
+  margin: 20px 0;
+  padding: 15px 30px 15px 15px;
+  border-left: 5px solid transparent;
+
+  h4 {
+    margin-top: 0;
+  }
+
+  p:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.callout-success {
+  background-color: $alert-success-bg;
+  border-color: $alert-success-text;
+}
+
+.callout-warning {
+  background-color: $alert-warning-bg;
+  border-color: $alert-warning-text;
+}
+
+.callout-danger {
+  background-color: $alert-danger-bg;
+  border-color: $alert-danger-text;
+}
+
+.callout-info {
+  background-color: $alert-info-bg;
+  border-color: $alert-info-text;
+}

@@ -1,5 +1,4 @@
 ---
-layout: project_overview
 title: Campusnews
 project: campusnews
 ---
@@ -12,7 +11,7 @@ I was responsible of organising the development of the iOS version. While Niklas
 
 The research internship was finished with an awesome and stable app which you can checkout in these stores:
 
-[![Campusnews Appstore Link](/res/app_store_135x40.png)](https://itunes.apple.com/de/app/campusnews/id320979722) [![Campusnews Playstore Link](/res/play_store_129x45.png)](https://play.google.com/store/apps/details?id=com.campusnews.uni)
+[![Campusnews Appstore Link](/assets/app_store_135x40.png)](https://itunes.apple.com/de/app/campusnews/id320979722) [![Campusnews Playstore Link](/assets/play_store_129x45.png)](https://play.google.com/store/apps/details?id=com.campusnews.uni)
 
 Just to give you an overview of most of my tasks:
 

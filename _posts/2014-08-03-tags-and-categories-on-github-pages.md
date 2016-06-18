@@ -1,5 +1,4 @@
 ---
-layout: post
 title: How To Use Tags And Categories On GitHub Pages Without Plugins
 category: programming
 tags: [github, github-pages, jekyll]
@@ -11,12 +10,12 @@ And with the jekyll integration it even get’s more awesome! :D
 
 But there are some limitations of this big automated system:
 
-* no own plugins
-* [limited available plugins](https://pages.github.com/versions/)
+*  no own plugins
+*  [limited available plugins](https://pages.github.com/versions/)
 
 As you may know:
 
-* no tag / category plugins are (currently) available.
+*  no tag / category plugins are (currently) available.
 
 Sad.. But that was something I really wanted to have!
 
@@ -27,11 +26,10 @@ You can see a live demo on this page.
 
 Here is a little guide how to implement it yourself:
 
-1. add some template logic on top of your __post layout__
+1.  add some template logic on top of your __post layout__
 
-    ```html+django
-    {% raw %}
-    {% assign post = page %}
+    ``` liquid
+    {% raw %}{% assign post = page %}
     {% if post.tags.size > 0 %}
         {% capture tags_content %}Posted with {% if post.tags.size == 1 %}<i class="fa fa-tag"></i>{% else %}<i class="fa fa-tags"></i>{% endif %}: {% endcapture %}
         {% for post_tag in post.tags %}
@@ -47,19 +45,18 @@ Here is a little guide how to implement it yourself:
         {% endfor %}
     {% else %}
         {% assign tags_content = '' %}
-    {% endif %}
-    {% endraw %}
+    {% endif %}{% endraw %}
     ```
 
-2. place the generated tag content wherever you like inside your __post layout__
+2.  place the generated tag content wherever you like inside your __post layout__
 
-    ```html
+    ``` html
     <p id="post-meta">{% raw %}{{ tags_content }}{% endraw %}</p>
     ```
 
-3. create a __blog\_by\_tag__ layout
+3.  create a __blog\_by\_tag__ layout
 
-    ```html
+    ``` html
     <h1>Articles by tag :{% raw %}{{ page.tag }}{% endraw %}</h1>
     <div>
         {% raw %}{% if site.tags[page.tag] %}
@@ -72,9 +69,9 @@ Here is a little guide how to implement it yourself:
     </div>
     ```
 
-4. annotate your __post entry__ front-matter block as usual:
+4.  annotate your __post entry__ front-matter block as usual:
 
-    ```yaml
+    ``` yaml
     ---
     layout: post
     title: How To Use Tags And Categories On GitHub Pages Without Plugins
@@ -83,16 +80,16 @@ Here is a little guide how to implement it yourself:
     ---
     ```
 
-5. for every used tag you have to add an entry inside your __\_data/tags.yml__
+5.  for every used tag you have to add an entry inside your __\_data/tags.yml__
 
-    ```yaml
+    ``` yaml
     - slug: github-pages
       name: GitHub Pages
     ```
 
-6. for every used tag you have to add an empty template - e.g. __blog/tag/github-pages.md__
+6.  for every used tag you have to add an empty template - e.g. __blog/tag/github-pages.md__
 
-    ```yaml
+    ``` yaml
     ---
     layout: blog_by_tag
     tag: github-pages
@@ -106,42 +103,42 @@ For a more complex implementation and categories: [check out my repository](http
 
 **Updates** (Feb. 12, 2015):
 
-* Added missing `{% assign post = page %}` (thanks [Christopher Rodriguez](https://github.com/cdr255))
+*  Added missing `{% raw %}{% assign post = page %}{% endraw %}` (thanks [Christopher Rodriguez](https://github.com/cdr255))
 
 **Updates** (Apr. 4, 2015):
 
-* Switch to absolute permalinks (which is forced by jekyll 2.0+)
+*  Switched to absolute permalinks (which is forced by jekyll 2.0+)
 
 **Updates** (June 14, 2015):
 
-* [Róbert Papp](https://github.com/TWiStErRob) suggested ([here](https://github.com/minddust/minddust.github.io/issues/5)) a restructuring of the data content so you can simplify the lookups. Thanks!
+*   [Róbert Papp](https://github.com/TWiStErRob) suggested ([here](https://github.com/minddust/minddust.github.io/issues/5)) a restructuring of the data content so you can simplify the lookups. Thanks!
 
-    **before**
+    *   **before**
 
-    ```yaml
-    - slug: github-pages
-      name: GitHub Pages
-    ```
+        ``` yaml
+        - slug: github-pages
+          name: GitHub Pages
+        ```
 
-    ```yaml
-    {% raw %}
-    {% for post_tag in post.tags %}
-        {% for data_tag in site.data.tags %}
-            {% if data_tag.slug == post_tag %}
-                {% assign tag = data_tag %}
-    {% endraw %}
-    ```
+        ``` liquid
+        {% raw %}{% for post_tag in post.tags %}
+            {% for data_tag in site.data.tags %}
+                {% if data_tag.slug == post_tag %}
+                    {% assign tag = data_tag %}{% endraw %}
+        ```
 
-    **after**
+    *   **after**
 
-    ```yaml
-    github-pages:
-      name: GitHub Pages
-    ```
+        ``` yaml
+        github-pages:
+          name: GitHub Pages
+        ```
 
-    ```yaml
-    {% raw %}
-    {% for post_tag in post.tags %}
-        {% assign tag = site.data.tags[post_tag] %}
-    {% endraw %}
-    ```
+        ``` liquid
+        {% raw %}{% for post_tag in post.tags %}
+            {% assign tag = site.data.tags[post_tag] %}{% endraw %}
+        ```
+
+**Updates** (May 18, 2016):
+
+*   Switched [my repository](https://github.com/minddust/minddust.github.io) to [Róbert Papp](https://github.com/TWiStErRob) simpler version. (see above)

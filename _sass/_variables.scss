@@ -1,0 +1,13 @@
+// minddust.com
+$color-darkblue:        #242a3a;
+$color-darkblue-active: #373c5a;
+$color-lightgray:       #fefefe;
+
+$footer-height:         50px;
+$footer-border-width:   1px;
+$footer-height-inner:   $footer-height - $footer-border-width;
+
+
+// bootstrap overrides
+$body-bg:               $color-lightgray;
+$list-group-bg:         $color-lightgray;

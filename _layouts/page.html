@@ -1,0 +1,10 @@
+---
+layout: default
+---
+
+{% capture page_title %}{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}{% endcapture %}
+{% capture page_subtitle %}{% if page.subtitle %}{{ page.subtitle }}{% else %}&nbsp;{% endif %}{% endcapture %}
+
+{% include title_header.html title=page_title subtitle=page_subtitle %}
+
+<div class="m-t-3 text-justify">{{ content }}</div>

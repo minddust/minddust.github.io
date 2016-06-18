@@ -1,0 +1,80 @@
+@mixin logo-md($size, $color, $background) {
+  $ratio: $size / 130;
+  position: relative;
+  width: $size;
+  height: $size;
+  left: 0;
+  top: 0;
+  overflow: hidden;
+  @include user-select(none);
+
+  div {
+    position: absolute;
+    background-color: $color;
+  }
+
+  .m-left {
+    width: 10 * $ratio;
+    height: 130 * $ratio;
+    top: 0 * $ratio;
+    left: 0 * $ratio;
+  }
+
+  .m-middle {
+    width: 10 * $ratio;
+    height: 60 * $ratio;
+    top: 20 * $ratio;
+    left: 30 * $ratio;
+  }
+
+  .m-right {
+    width: 10 * $ratio;
+    height: 130 * $ratio;
+    top: 0 * $ratio;
+    left: 60 * $ratio;
+  }
+
+  .d-outer {
+    width: 50 * $ratio;
+    height: 130 * $ratio;
+    top: 0 * $ratio;
+    left: 80 * $ratio;
+    border-bottom-right-radius: 50 * $ratio;
+    border-top-right-radius: 50 * $ratio;
+  }
+
+  .d-inner {
+    width: 40 * $ratio;
+    height: 110 * $ratio;
+    top: 10 * $ratio;
+    left: 80 * $ratio;
+    border-bottom-right-radius: 40 * $ratio;
+    border-top-right-radius: 40 * $ratio;
+    background-color: $background;
+  }
+}
+
+.logo-md-home {
+  @include logo-md(120px, $color-darkblue, $color-lightgray);
+  margin: 10px;
+}
+
+#logo-md-home-link {
+  display: block !important;
+  background-color: $color-lightgray;
+  margin: auto;
+  padding: 5px;
+  width: 150px;
+  &:hover,
+  &:focus {
+    background-color: $color-darkblue;
+    div {
+      div {
+        background-color: $color-lightgray;
+        &.d-inner {
+          background-color: $color-darkblue;
+        }
+      }
+    }
+  }
+}

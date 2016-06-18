@@ -1,5 +1,4 @@
 ---
-layout: project_overview
 title: Django spaceless_except_pre
 project: django-spaceless-except-pre
 ---

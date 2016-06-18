@@ -1,5 +1,4 @@
 ---
-layout: project_changelog
 title: jQuery-pjaxr
 project: jquery-pjaxr
 permalink: /project/jquery-pjaxr/changelog/

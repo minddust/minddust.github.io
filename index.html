@@ -2,31 +2,36 @@
 layout: default
 ---
 
-<header id="post-header">
-    <h1 id="post-title">
-        <a href="/" id="logo-md-home-link">
-            <div class="logo-md-home">
-                <div class="m-left"></div>
-                <div class="m-middle"></div>
-                <div class="m-right"></div>
-                <div class="d-outer"></div>
-                <div class="d-inner"></div>
-            </div>
-        </a>
-    </h1>
-    <h4>Hi, I’m Stephan. I’m a founder,<br>student and sometimes I write code.</h4>
+<header>
+  <h1>
+    <a href="/" id="logo-md-home-link">
+      <div class="logo-md-home">
+        <div class="m-left"></div>
+        <div class="m-middle"></div>
+        <div class="m-right"></div>
+        <div class="d-outer"></div>
+        <div class="d-inner"></div>
+      </div>
+    </a>
+  </h1>
+  <h2 class="h5 text-xs-center">Hi, I’m Stephan. I’m a founder,<br>freelancer and sometimes I write code.</h2>
 </header>
 
-
-{% if site.posts.size > 0 %}
+<div class="m-t-3">
+  {% if site.posts.size > 0 %}
     <div class="list-group">
-        {% for post in site.posts limit: 10 %}
-            <a href="{{ post.url }}" class="list-group-item">
-                <h4 class="list-group-item-heading">{{ post.title }}<small> &ndash; <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: '%b. %d, %Y' }}</time></small></h4>
-            </a>
-        {% endfor %}
+      {% for post in site.posts limit: 10 %}
+        <a href="{{ post.url }}" class="list-group-item">
+          <h4 class="list-group-item-heading h6">{{ post.title }}
+            <small class="text-muted"> &ndash;
+              <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: '%b. %d, %Y' }}</time>
+            </small>
+          </h4>
+        </a>
+      {% endfor %}
     </div>
-    <a href="/blog/" class="pull-right">more <i class="fa fa-long-arrow-right"></i></a>
-{% else %}
+    <p class="text-xs-right m-t-1 m-b-0"><a href="/blog/">more ➟</a></p>
+  {% else %}
     <p>No posts found.</p>
-{% endif %}
+  {% endif %}
+</div>

@@ -1,0 +1,27 @@
+---
+title: Projects
+subtitle: All the cool stuff!
+permalink: /projects/
+---
+
+{% if site.data.projects.size > 0 %}
+  <div class="list-group text-xs-left">
+    {% for project_data in site.data.projects %}
+      {% assign project_slug = project_data[0] %}
+      {% assign project = project_data[1] %}
+      <a href="/project/{{ project_slug }}/" class="list-group-item p-t-0 p-l-0 p-b-0">
+        <div class="media m-b-0">
+          <div class="media-left">
+            <img class="media-object" src="/assets/{{ project_slug }}/cover-image.png" alt="{{ project.title }} cover image">
+          </div>
+          <div class="media-body">
+            <h4 class="media-heading">{{ project.title }}</h4>
+            {% if project.subtitle %}<p class="hidden-xs-down m-b-0">{{ project.subtitle }}</p>{% endif %}
+          </div>
+        </div>
+      </a>
+    {% endfor %}
+  </div>
+{% else %}
+  <p>There are no projects on {{ site.domain }}</p>
+{% endif %}

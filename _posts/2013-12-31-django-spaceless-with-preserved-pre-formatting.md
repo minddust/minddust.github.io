@@ -1,5 +1,4 @@
 ---
-layout: post
 category: programming
 tags: [django, django-template-tags, python]
 ---
@@ -13,14 +12,14 @@ I'm using Django's [spaceless](https://docs.djangoproject.com/en/dev/ref/templat
 
 Summary:
 
-* not possible with builtin methods
-* not coming with future versions
+*   not possible with builtin methods
+*   not coming with future versions
 
 It was my fault to expect something different from a tag which does exactly what it should.
 
 But this doesn't matter - let's build a new template tag that does the trick! :)
 
-```python
+``` python
 """Copyright (c) 2013-2014 Stephan Groß, under MIT license."""
 from __future__ import unicode_literals
 
@@ -71,7 +70,7 @@ Just put this snippet in a new file (like `spaceless_except_pre.py`) inside your
 
 Now you can load and apply this tag inside your template like:
 
-{% highlight html+django %}
+``` html
 {% raw %}{% load spaceless_except_pre %}{% spaceless_except_pre %}
 <html>
 <body>
@@ -85,11 +84,11 @@ Now you can load and apply this tag inside your template like:
 </body>
 </html>
 {% endspaceless_except_pre %}{% endraw %}
-{% endhighlight %}
+```
 
 which will result in:
 
-```html
+``` html
 <html><body><div class="codehilite"><pre><code><span class="k">def</span> <span class="nf">hello</span><span class="p">():</span>
     <span class="k">print</span> <span class="s">&quot;world&quot;</span>
 </code></pre></div></body></html>
@@ -97,7 +96,7 @@ which will result in:
 
 and frontend:
 
-```html
+``` python
 def hello():
     print "world"
 ```
@@ -106,9 +105,9 @@ You could also take a look at the source of this post for a bigger example.
 
 For those of you who like digging deeper, I simply matched all `<pre>..</pre>` blocks and call a `replacement` method. Inside that method I:
 
-* append the original content to a list.
-* increment a counter
-* replace the matched pre block content with a placeholder
+*   append the original content to a list.
+*   increment a counter
+*   replace the matched pre block content with a placeholder
 
 The trick is that the replaced content with the individual id fits the python string [format](http://docs.python.org/2/library/stdtypes.html#str.format) method syntax. So after stripping out all whitespaces between the tags I call format and pass my filled matched list.
 
@@ -118,7 +117,7 @@ And that's it. Thank you for reading.
 
 **Updates** (Jan. 1, 2014):
 
-* Improved script to save complete original expression and ignore cases.
-* Fix example to use highlighted code (which causes the troubles)
+*   Improved script to save complete original expression and ignore cases.
+*   Fix example to use highlighted code (which causes the troubles)
 
 P.S.: Plain text is doing just fine with the default spaceless tag cause it isn't affected by the strip regex.

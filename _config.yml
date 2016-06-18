@@ -1,25 +1,77 @@
-timezone: Europe/Berlin
-highlighter: pygments
-markdown: redcarpet
-permalink: /post/:title
+# Where things are
+collections:
+  my_categories:
+    output: true
+    permalink: /blog/category/:name/
+  my_tags:
+    output: true
+    permalink: /blog/tag/:name/
 
-redcarpet:
-  extensions: [autolink]
+# Handling Reading
+exclude: [Gemfile, README.md]
 
-exclude: [README.md, TODO.md, LICENSE, node_modules, Makefile, Gulpfile.js, package.json]
+# Plugins
+gems:
+  - jekyll-coffeescript
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-feed
+  - jekyll-seo-tag
 
-paginate: 5
-paginate_path: '/blog/:num'
-
+# Conversion
+markdown:    kramdown
+highlighter: rouge
 excerpt_separator: "\n\n\n"
 
-# own settings
-name: minddust
+# Outputting
+permalink: /post/:title/
+paginate: 5
+paginate_path: '/blog/page/:num/'
+timezone: Europe/Berlin
+
+defaults:
+  -
+    scope:
+      path: ""
+      type: pages
+    values:
+      layout: page
+  -
+    scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+  -
+    scope:
+      path: ""
+      type: my_categories
+    values:
+      layout: blog_by_category
+  -
+    scope:
+      path: ""
+      type: my_tags
+    values:
+      layout: blog_by_tag
+  -
+    scope:
+      path: "project"
+    values:
+      layout: project
+
+sass:
+  style: compressed
+
+# Custom
 domain: minddust.com
 url: http://www.minddust.com
+title: minddust.com
 description: Portfolio website of Stephan Groß
-copyright: 2013&mdash;2015
-author:
-    name: Stephan Groß
-    github_link: https://github.com/minddust
-    twitter_link: https://twitter.com/minddust
+copyright: 2013&mdash;2016
+name: minddust
+author: minddust
+twitter:
+  username: minddust
+github:
+  username: minddust

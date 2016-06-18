@@ -1,5 +1,4 @@
 ---
-layout: post
 title: Switch To GitHub Pages
 category: general
 tags: [github, github-pages]

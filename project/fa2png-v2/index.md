@@ -1,5 +1,4 @@
 ---
-layout: project_overview
 title: fa2png-v2
 project: fa2png-v2
 ---
@@ -16,4 +15,4 @@ It took me about 3 weeks from the first line of code to the first release.
 
 If you are interested in the project: [check it out at fa2png.io](http://fa2png.io/)
 
-<img src="/res/fa2png-v2/screenshot.jpg" class="img-responsive">
+<img src="/assets/fa2png-v2/screenshot.jpg" class="img-fluid">

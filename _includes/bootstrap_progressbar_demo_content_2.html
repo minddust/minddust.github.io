@@ -2,198 +2,198 @@
 <h4>callbacks <button type="button" class="btn btn-primary" id="m-callback-start">start</button> <button type="button" class="btn btn-danger" id="m-callback-reset">reset</button></h4>
 
 <div class="bs-example m-callback">
-    <div class="{{ bs_pro_def }}"><div class="{{ bs_bar_def }}" role="progressbar" data-transitiongoal-backup="100"></div></div>
-    <p>update: <span class="label label-info" id="m-callback-update"></span></p>
-    <p>done: <span class="label label-success" id="m-callback-done"></span></p>
-    <script type='text/javascript'>
-        $(document).ready(function() {
-            $('#m-callback-start').click(function() {
-                $('#m-callback-update').html('');
-                $('#m-callback-done').html('');
-                var $pb = $('.m-callback .{{ bs_bar_def }}');
-                $pb.attr('data-transitiongoal', $pb.attr('data-transitiongoal-backup'));
-                $pb.progressbar({
-                    update: function(current_percentage) { $('#m-callback-update').html(current_percentage); },
-                    done: function() { $('#m-callback-done').html('yeah! done!'); }
-                });
-            });
-            $('#m-callback-reset').click(function() {
-                $('#m-callback-update').html('');
-                $('#m-callback-done').html('');
-                $('.m-callback .{{ bs_bar_def }}').attr('data-transitiongoal', 0).progressbar({
-                    update: function(current_percentage) { $('#m-callback-update').html(current_percentage); },
-                    done: function() { $('#m-callback-done').html('yeah! done!'); }
-                });
-            });
+  <div class="{{ bs_pro_def }}"><div class="{{ bs_bar_def }}" role="progressbar" data-transitiongoal-backup="100"></div></div>
+  <p>update: <span class="label label-info" id="m-callback-update"></span></p>
+  <p>done: <span class="label label-success" id="m-callback-done"></span></p>
+  <script type='text/javascript'>
+    $(document).ready(function() {
+      $('#m-callback-start').click(function() {
+        $('#m-callback-update').html('');
+        $('#m-callback-done').html('');
+        var $pb = $('.m-callback .{{ bs_bar_def }}');
+        $pb.attr('data-transitiongoal', $pb.attr('data-transitiongoal-backup'));
+        $pb.progressbar({
+          update: function(current_percentage) { $('#m-callback-update').html(current_percentage); },
+          done: function() { $('#m-callback-done').html('yeah! done!'); }
         });
-    </script>
+      });
+      $('#m-callback-reset').click(function() {
+        $('#m-callback-update').html('');
+        $('#m-callback-done').html('');
+        $('.m-callback .{{ bs_bar_def }}').attr('data-transitiongoal', 0).progressbar({
+          update: function(current_percentage) { $('#m-callback-update').html(current_percentage); },
+          done: function() { $('#m-callback-done').html('yeah! done!'); }
+        });
+      });
+    });
+  </script>
 </div>
 {% highlight html %}
 <div class="{{ bs_pro_def }}">
-    <div class="{{ bs_bar_def }}" role="progressbar" data-transitiongoal="100"></div>
+  <div class="{{ bs_bar_def }}" role="progressbar" data-transitiongoal="100"></div>
 </div>
 <span id="update"></span>
 <span id="done"></span>
 
 $(document).ready(function() {
-    $('.{{ bs_pro_def }} .{{ bs_bar_def }}').progressbar({
-        update: function(current_percentage) { $('#update').html(current_percentage); },
-        done: function() { $('#done').html('yeah! done!'); }
-    });
+  $('.{{ bs_pro_def }} .{{ bs_bar_def }}').progressbar({
+    update: function(current_percentage) { $('#update').html(current_percentage); },
+    done: function() { $('#done').html('yeah! done!'); }
+  });
 });
 {% endhighlight %}
 
-<div style="height: 40px">&nbsp;</div>
+<div class="m-y-2">&nbsp;</div>
 
 <a name="m-callback-this"></a>
 <h4>callbacks using $this <button type="button" class="btn btn-primary" id="m-callback-this-start">start</button> <button type="button" class="btn btn-danger" id="m-callback-this-reset">reset</button></h4>
 
 <div class="bs-example m-callback-this">
-    <div class="{{ bs_pro_def }}"><div class="{{ bs_bar_def }} six-sec-ease-in-out" role="progressbar" data-transitiongoal-backup="100"></div></div>
-    <script type='text/javascript'>
-        $(document).ready(function() {
-            // thanks:
-            // http://stackoverflow.com/questions/5833624/increase-css-brightness-color-on-click-with-jquery-javascript
-            // http://jsfiddle.net/K8cMX/7/
-            function HsvToRgb(h, s, v) {
-                h = h / 360;
-                s = s / 100;
-                v = v / 100;
+  <div class="{{ bs_pro_def }}"><div class="{{ bs_bar_def }} six-sec-ease-in-out" role="progressbar" data-transitiongoal-backup="100"></div></div>
+  <script type='text/javascript'>
+    $(document).ready(function() {
+      // thanks:
+      // http://stackoverflow.com/questions/5833624/increase-css-brightness-color-on-click-with-jquery-javascript
+      // http://jsfiddle.net/K8cMX/7/
+      function HsvToRgb(h, s, v) {
+        h = h / 360;
+        s = s / 100;
+        v = v / 100;
 
-                if (s == 0)
-                {
-                    var val = Math.round(v * 255);
-                    return {r:val,g:val,b:val};
-                }
-                hPos = h * 6;
-                hPosBase = Math.floor(hPos);
-                base1 = v * (1 - s);
-                base2 = v * (1 - s * (hPos - hPosBase));
-                base3 = v * (1 - s * (1 - (hPos - hPosBase)));
-                if (hPosBase == 0) {red = v; green = base3; blue = base1}
-                else if (hPosBase == 1) {red = base2; green = v; blue = base1}
-                else if (hPosBase == 2) {red = base1; green = v; blue = base3}
-                else if (hPosBase == 3) {red = base1; green = base2; blue = v}
-                else if (hPosBase == 4) {red = base3; green = base1; blue = v}
-                else {red = v; green = base1; blue = base2};
+        if (s == 0)
+        {
+          var val = Math.round(v * 255);
+          return {r:val,g:val,b:val};
+        }
+        hPos = h * 6;
+        hPosBase = Math.floor(hPos);
+        base1 = v * (1 - s);
+        base2 = v * (1 - s * (hPos - hPosBase));
+        base3 = v * (1 - s * (1 - (hPos - hPosBase)));
+        if (hPosBase == 0) {red = v; green = base3; blue = base1}
+        else if (hPosBase == 1) {red = base2; green = v; blue = base1}
+        else if (hPosBase == 2) {red = base1; green = v; blue = base3}
+        else if (hPosBase == 3) {red = base1; green = base2; blue = v}
+        else if (hPosBase == 4) {red = base3; green = base1; blue = v}
+        else {red = v; green = base1; blue = base2};
 
-                red = Math.round(red * 255);
-                green = Math.round(green * 255);
-                blue = Math.round(blue * 255);
-                return {r:red,g:green,b:blue};
-            }
-            $('#m-callback-this-start').click(function() {
-                var $pb = $('.m-callback-this .{{ bs_bar_def }}');
-                $pb.attr('data-transitiongoal', $pb.attr('data-transitiongoal-backup'));
-                $pb.progressbar({
-                    update: function(current_percentage, $this) {
-                        var color_helper = Math.round(current_percentage * 1.2); // red to green == 0 to 120 degree
-                        var colors = HsvToRgb(color_helper, 100, 100);
-                        $this.parent().parent().css('background-color', 'rgb(' + colors['r'] + ', ' + colors['g'] + ', ' + colors['b'] + ')');
-                    }
-                });
-            });
-            $('#m-callback-this-reset').click(function() {
-                $('.m-callback-this .{{ bs_bar_def }}').attr('data-transitiongoal', 0).progressbar();
-            });
+        red = Math.round(red * 255);
+        green = Math.round(green * 255);
+        blue = Math.round(blue * 255);
+        return {r:red,g:green,b:blue};
+      }
+      $('#m-callback-this-start').click(function() {
+        var $pb = $('.m-callback-this .{{ bs_bar_def }}');
+        $pb.attr('data-transitiongoal', $pb.attr('data-transitiongoal-backup'));
+        $pb.progressbar({
+          update: function(current_percentage, $this) {
+            var color_helper = Math.round(current_percentage * 1.2); // red to green == 0 to 120 degree
+            var colors = HsvToRgb(color_helper, 100, 100);
+            $this.parent().parent().css('background-color', 'rgb(' + colors['r'] + ', ' + colors['g'] + ', ' + colors['b'] + ')');
+          }
         });
-    </script>
+      });
+      $('#m-callback-this-reset').click(function() {
+        $('.m-callback-this .{{ bs_bar_def }}').attr('data-transitiongoal', 0).progressbar();
+      });
+    });
+  </script>
 </div>
 {% highlight html %}
 .six-sec-ease-in-out {
-    -webkit-transition: width 6s ease-in-out;
-    -moz-transition: width 6s ease-in-out;
-    -ms-transition: width 6s ease-in-out;
-    -o-transition: width 6s ease-in-out;
-    transition: width 6s ease-in-out;
+  -webkit-transition: width 6s ease-in-out;
+  -moz-transition: width 6s ease-in-out;
+  -ms-transition: width 6s ease-in-out;
+  -o-transition: width 6s ease-in-out;
+  transition: width 6s ease-in-out;
 }
 
 <div class="{{ bs_pro_def }}">
-    <div class="{{ bs_bar_def }} six-sec-ease-in-out" role="progressbar" data-transitiongoal="100"></div>
+  <div class="{{ bs_bar_def }} six-sec-ease-in-out" role="progressbar" data-transitiongoal="100"></div>
 </div>
 
 $(document).ready(function() {
-    $('.{{ bs_pro_def }} .{{ bs_bar_def }}').progressbar({
-        update: function(current_percentage, $this) {
-            $this.parent().parent().css('background-color', 'rgb(' + Math.round(current_percentage / 100 * 255) + ', 0, 0)');
-        }
-    });
+  $('.{{ bs_pro_def }} .{{ bs_bar_def }}').progressbar({
+    update: function(current_percentage, $this) {
+      $this.parent().parent().css('background-color', 'rgb(' + Math.round(current_percentage / 100 * 255) + ', 0, 0)');
+    }
+  });
 });
 {% endhighlight %}
 
-<div style="height: 40px">&nbsp;</div>
+<div class="m-y-2">&nbsp;</div>
 
 
 <a name="m-error"></a>
 <h4>error <button type="button" class="btn btn-primary" id="m-error-start">start</button></h4>
 
 <div class="bs-example m-error">
-    <div class="{{ bs_pro_def }}"><div class="{{ bs_bar_def }}" role="progressbar"></div></div>
-    <p>error: <span class="label label-danger" id="m-callback-error"></span></p>
-    <script type='text/javascript'>
-        $(document).ready(function() {
-            $('#m-error-start').click(function() {
-                $('.m-error .{{ bs_bar_def }}').progressbar({
-                    fail: function(error) { $('#m-callback-error').html(error); }
-                });
-            });
+  <div class="{{ bs_pro_def }}"><div class="{{ bs_bar_def }}" role="progressbar"></div></div>
+  <p>error: <span class="label label-danger" id="m-callback-error"></span></p>
+  <script type='text/javascript'>
+    $(document).ready(function() {
+      $('#m-error-start').click(function() {
+        $('.m-error .{{ bs_bar_def }}').progressbar({
+          fail: function(error) { $('#m-callback-error').html(error); }
         });
-    </script>
+      });
+    });
+  </script>
 </div>
 {% highlight html %}
 <div class="{{ bs_pro_def }}">
-    <div class="{{ bs_bar_def }}" role="progressbar"></div>
+  <div class="{{ bs_bar_def }}" role="progressbar"></div>
 </div>
 <span id="error"></span>
 
 $(document).ready(function() {
-    $('.{{ bs_pro_def }} .{{ bs_bar_def }}').progressbar({
-        fail: function(error) { $('#error').html(error); }
-    });
+  $('.{{ bs_pro_def }} .{{ bs_bar_def }}').progressbar({
+    fail: function(error) { $('#error').html(error); }
+  });
 });
 {% endhighlight %}
 
-<div style="height: 40px">&nbsp;</div>
+<div class="m-y-2">&nbsp;</div>
 
 
 <a name="m-multi-trigger"></a>
-<h4>multi trigger <button type="button" class="btn btn-primary" id="m-multi-trigger-0">0</button> <button type="button" class="btn btn-primary" id="m-multi-trigger-50">50</button> <button type="button" class="btn btn-primary" id="m-multi-trigger-100">100</button></h4></h4>
+<h4>multi trigger <button type="button" class="btn btn-primary" id="m-multi-trigger-0">0</button> <button type="button" class="btn btn-primary" id="m-multi-trigger-50">50</button> <button type="button" class="btn btn-primary" id="m-multi-trigger-100">100</button></h4>
 
 <div class="bs-example m-multi-trigger">
-    <div class="{{ bs_pro_def }}"><div class="{{ bs_bar_def }}" role="progressbar"></div></div>
-    <script type='text/javascript'>
-        $(document).ready(function() {
-            var $pb = $('.m-multi-trigger .{{ bs_bar_def }}');
-            $('#m-multi-trigger-0').click(function() {
-                $pb.attr('data-transitiongoal', 0).progressbar({display_text: 'center'});
-            });
-            $('#m-multi-trigger-50').click(function() {
-                $pb.attr('data-transitiongoal', 50).progressbar({display_text: 'center'});
-            });
-            $('#m-multi-trigger-100').click(function() {
-                $pb.attr('data-transitiongoal', 100).progressbar({display_text: 'center'});
-            });
-        });
-    </script>
+  <div class="{{ bs_pro_def }}"><div class="{{ bs_bar_def }}" role="progressbar"></div></div>
+  <script type='text/javascript'>
+    $(document).ready(function() {
+      var $pb = $('.m-multi-trigger .{{ bs_bar_def }}');
+      $('#m-multi-trigger-0').click(function() {
+        $pb.attr('data-transitiongoal', 0).progressbar({display_text: 'center'});
+      });
+      $('#m-multi-trigger-50').click(function() {
+        $pb.attr('data-transitiongoal', 50).progressbar({display_text: 'center'});
+      });
+      $('#m-multi-trigger-100').click(function() {
+        $pb.attr('data-transitiongoal', 100).progressbar({display_text: 'center'});
+      });
+    });
+  </script>
 </div>
 {% highlight html %}
 <div class="{{ bs_pro_def }}">
-    <div class="{{ bs_bar_def }}" role="progressbar"></div>
+  <div class="{{ bs_bar_def }}" role="progressbar"></div>
 </div>
 <button type="button" id="trigger-0">0</button>
 <button type="button" id="trigger-50">50</button>
 <button type="button" id="trigger-100">100</button>
 
 $(document).ready(function() {
-    var $pb = $('.{{ bs_pro_def }} .{{ bs_bar_def }}');
-    $('#m-multi-trigger-0').click(function() {
-        $pb.attr('data-transitiongoal', 0).progressbar({display_text: 'center'});
-    });
-    $('#m-multi-trigger-50').click(function() {
-        $pb.attr('data-transitiongoal', 50).progressbar({display_text: 'center'});
-    });
-    $('#m-multi-trigger-100').click(function() {
-        $pb.attr('data-transitiongoal', 100).progressbar({display_text: 'center'});
-    });
+  var $pb = $('.{{ bs_pro_def }} .{{ bs_bar_def }}');
+  $('#m-multi-trigger-0').click(function() {
+    $pb.attr('data-transitiongoal', 0).progressbar({display_text: 'center'});
+  });
+  $('#m-multi-trigger-50').click(function() {
+    $pb.attr('data-transitiongoal', 50).progressbar({display_text: 'center'});
+  });
+  $('#m-multi-trigger-100').click(function() {
+    $pb.attr('data-transitiongoal', 100).progressbar({display_text: 'center'});
+  });
 });
 {% endhighlight %}

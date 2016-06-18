@@ -1,5 +1,4 @@
 ---
-layout: project_changelog
 title: bootstrap-progressbar
 project: bootstrap-progressbar
 permalink: /project/bootstrap-progressbar/changelog/
