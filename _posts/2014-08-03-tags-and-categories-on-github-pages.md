@@ -4,6 +4,10 @@ category: programming
 tags: [github, github-pages, jekyll]
 ---
 
+**UPDATE: [Alternative DRY Solution]({% post_url 2016-09-08-alternative-tags-and-categories-on-github-pages %})** (Sep. 8, 2016)
+
+---
+
 [GitHub Pages](http://pages.github.com/) service is just awesome!
 
 And with the jekyll integration it even get’s more awesome! :D
@@ -57,7 +61,7 @@ Here is a little guide how to implement it yourself:
 3.  create a __blog\_by\_tag__ layout
 
     ``` html
-    <h1>Articles by tag :{% raw %}{{ page.tag }}{% endraw %}</h1>
+    <h1>Articles by tag: {% raw %}{{ page.tag }}{% endraw %}</h1>
     <div>
         {% raw %}{% if site.tags[page.tag] %}
             {% for post in site.tags[page.tag] %}{% endraw %}
@@ -109,7 +113,7 @@ For a more complex implementation and categories: [check out my repository](http
 
 *  Switched to absolute permalinks (which is forced by jekyll 2.0+)
 
-**Updates** (June 14, 2015):
+**Updates** (Jun. 14, 2015):
 
 *   [Róbert Papp](https://github.com/TWiStErRob) suggested ([here](https://github.com/minddust/minddust.github.io/issues/5)) a restructuring of the data content so you can simplify the lookups. Thanks!
 
@@ -142,3 +146,7 @@ For a more complex implementation and categories: [check out my repository](http
 **Updates** (May 18, 2016):
 
 *   Switched [my repository](https://github.com/minddust/minddust.github.io) to [Róbert Papp](https://github.com/TWiStErRob) simpler version. (see above)
+
+**Updates** (Jun. 18, 2016):
+
+*   Switched to [collection method]({% post_url 2016-09-08-alternative-tags-and-categories-on-github-pages %}).  For the former solution check out version history.

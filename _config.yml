@@ -12,7 +12,6 @@ exclude: [Gemfile, README.md]
 
 # Plugins
 gems:
-  - jekyll-coffeescript
   - jekyll-paginate
   - jekyll-sitemap
   - jekyll-feed
